@@ -1,0 +1,701 @@
+@charset "utf-8";
+
+@font-face {
+    /* 오뮤다예쁨체 font-family 복사 */
+    font-family: 'omyu_pretty'; /* sans-sefif 추가 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+a { text-decoration: none; color: inherit;}
+body { background: #fff; width: 100%; color: #333;}
+
+/* .ibm-plex-sans-kr-regular {
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ibm-plex-sans-kr-semibold {
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+} */
+
+/* 내비게이션바 */
+#nav {
+    height: 100px;
+    width: 100%;
+    background: #9dc4b2;
+    border-radius: 0 0 20px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+#nav > nav {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#nav > nav > h1 {
+    width: 10%;
+    padding: 0 150px 0 20px;
+}
+#nav > nav > ul {
+    display: flex;
+    width: 90%;
+    padding: 5px;
+}
+#nav > nav > ul > li {
+    width: 33.333%;
+    text-align: center;
+}
+#nav > nav > ul > li > a { 
+    display: block; 
+    padding: 10px;
+}
+
+/* 메인페이지 */
+#content1 { 
+    width: 1200px;
+    height: 100vh;
+    /* background-color: #ccc; */
+    margin: 0 auto;
+}
+.tab {
+    /* background-color: #aaa; */
+    display: flex;
+    padding-top: 250px;
+}
+#tab-menu {
+    width: 200px;
+    /* background-color: #ffa; */
+    font-size: 17px;
+    margin: 120px 0;
+
+    position: relative;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#tab-menu > li {
+    padding-left: 50px;
+    position: relative;
+}
+#tab-menu > li:not(:last-child) { margin-bottom: 123px;}
+
+/* 선 */
+#tab-menu::before {
+    height: 280px;
+    border-right: 2px solid #568797;
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 10px;
+    left: -1px;
+}
+/* 불릿 */
+#tab-menu > li::before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: block;
+    background-color: #568797;
+    border-radius: 50%;
+    z-index: 10;
+
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* 불릿 배경 */
+#tab-menu.tab-1 > li:nth-child(1)::after,
+#tab-menu.tab-2 > li:nth-child(2)::after,
+#tab-menu.tab-3 > li:nth-child(3)::after {
+    width: 50px;
+    height: 50px;
+    background-color: #9dc4b2;
+    opacity: .3;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    z-index: 1;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* #tab-menu.tab-1 .tab-2 .tab-3 > li:nth-child(-n+3)::after {
+    width: 50px;
+    height: 50px;
+    background-color: #9dc4b2;
+    opacity: .3;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    z-index: 1;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* 소개 */
+#content1-box {
+    width: 1000px;
+    background: #e6f0ef;
+    border-radius: 80px;
+}
+#box-introduce {
+    padding: 15px 20px;
+    height: 510px;
+}
+#introduce-name {
+    font-family: 'omyu_pretty', sans-serif;
+    font-size: 25px;
+    padding: 15px 0 0 30px;
+}
+#hobby {
+    display: flex;
+    margin-top: 25px;
+    text-align: center;
+    justify-content: space-between;
+}
+#hobby > li > p {
+    line-height: 1.3;
+    margin-top: 10px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#birthday { padding-top: 10px;}
+
+/* 소개 none 처리 */
+/* #box-introduce { display: none;} */
+
+/* 사용스킬 / 학력 / 자격증 */
+#centerbox {
+    display: flex;
+    /* padding: 109px; */
+    align-items: center;
+    justify-content: center;
+    padding: 110px 0;
+}
+/* 사용스킬 */
+/* #skil { margin-left: 30px;} */
+#skil-name { 
+    padding: 5px 10px;
+    margin-top: 10px;
+
+    font-size: 25px;
+    font-family: 'omyu_pretty', sans-serif;
+}
+#list > li > .line {
+    display: flex;
+    justify-content: center;
+}
+#list > li:first-child { margin-top: 40px;}
+#list > li:last-child { margin-top: 10px;}
+.line > li { margin-right: 20px;}
+.line > li:last-child { margin-right: 0;}
+
+/* 학력 */
+#study { margin-left: 80px;}
+#school > h3, #license > h3 { 
+    padding: 5px 10px;
+    
+    font-size: 25px;
+    font-family: 'omyu_pretty', sans-serif;
+}
+#school > ul, #license > ul {
+    margin-top: 20px;
+    padding-left: 10px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#school > ul > li { margin-bottom: 20px;}
+#school > ul > li:last-child { margin-bottom: 0;}
+.school-data { 
+    width: 180px;
+    display: inline-block;
+}
+.study-right { 
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+}
+
+/* 자격증 & 면허증 */
+#license { margin-top: 70px;}
+#license > ul > li { margin-bottom: 20px;}
+#license > ul > li:last-child { margin-bottom: 0;}
+.license-data {
+    display: inline-block;
+    width: 180px;
+}
+
+/* 학력 none 처리 */
+#box-education { display: none;}
+
+/* 연락처 */
+#contact-box {
+    display: flex;
+    padding: 130px;
+    justify-content: space-between;
+}
+#contact-box > li {
+    width: 305px;
+    height: 280px;
+    background: #9dc4b2;
+    border-radius: 50px;
+    text-align: center;
+}
+#contact-box > li > img {
+    width: 135px;
+    height: 135px;
+    margin: 30px;
+}
+#contact-box > li > h4 {
+    font-size: 18px;
+    background: #e6f0ef;
+    padding: 20px 0;
+    border-radius: 30px;
+    width: 250px;
+    margin: 0 auto;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 연락처 none 처리 */
+#box-contact { display: none;}
+
+/* 성격페이지 */
+/* #content2 {
+    width: 1200px;
+    height: 100vh;
+    background: #ddd;
+    margin: 0 auto;
+    padding-top: 10px;
+} */
+/* #personality-box {
+    background-color: #e6f0ef;
+    margin: 250px auto;
+    border-radius: 80px;
+    padding: 75px 55px;
+} */
+#content2 {
+    width: 1200px;
+    height: 100vh;
+    /* background: #ccc; */
+    margin: 0 auto;
+    padding-top: 100px;
+}
+#personality-box {
+    background: #e6f0ef;
+    border-radius: 80px;
+    padding: 75px 55px;
+    margin: 150px auto;
+}
+#personality-box > h2 {
+    font-size: 25px;
+    font-family: 'omyu_pretty', sans-serif;
+    padding: 0 15px 0 15px;
+}
+#personality-box > ul {
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-around;
+}
+#personality-box > ul > li {
+    width: 290px;
+    height: 290px;
+    background: #9dc4b2;
+    text-align: center;
+    border-radius: 50px;
+
+    position: relative;
+}
+#personality-box > ul > li > img { margin: 94px auto;}
+#personality-box > ul > li:hover { 
+    cursor: pointer;
+    background: #8ab19f;
+}
+
+/* 팝업창 */
+/* #personality-popup1 {
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    opacity: 0;
+}
+#personality-popup1 {
+    opacity: 1;
+    visibility: visible;
+}
+#personality-popup1 > .popup-box > p {
+    visibility: hidden;
+}
+#personality-popup1 > .popup-button {
+    display: none;
+} */
+/* #personality-popup1 {
+    width: 290px;
+    height: 290px;
+    background: #9dc4b2;
+    position: absolute;
+    border-radius: 50px;
+    top: 0;
+    overflow: hidden;
+}
+#personality-popup1.on {
+    width: 380px;
+    height: 450px;
+    background: #9dc4b2;
+    border-radius: 60px;
+    z-index: 20;
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+
+    display: none;
+} */
+#personality-popup1,
+#personality-popup2,
+#personality-popup3 { 
+    width: 380px;
+    height: 450px;
+    background: #9dc4b2;
+    border-radius: 60px;
+    z-index: 20;
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+
+    display: none;
+}
+
+.popup-button {
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    padding: 30px;
+    color: #666;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.popup-box > h2 {
+    font-size: 25px;
+    padding-top: 25px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.popup-box > img { margin: 35px;}
+.popup-box > p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+#personality-popup3 > .popup-box > p { padding-top: 20px;}
+#personality-popup3 > .popup-button {
+    margin-top: 30px;
+}
+
+/* 이직 선택 이유 & 연관성 페이지 */
+#content3 { 
+    width: 1200px;
+    height: 100vh;
+    /* background: #ccc; */
+    margin: 0 auto;
+}
+#content3-box {
+    width: 1000px;
+    background: #e6f0ef;
+    border-radius: 80px;
+}
+#tab-menu2 {
+    width: 200px;
+    /* background: #ffa; */
+    font-size: 17px;
+    margin: 145px 0;
+
+    position: relative;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#tab-menu2 > li {
+    padding-left: 50px;
+    position: relative;
+}
+#tab-menu2 > li:first-child { margin-bottom: 215px;}
+
+/* 선 */
+#tab-menu2::before {
+    height: 230px;
+    border-right: 2px solid #568797;
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 10px;
+    left: -1px;
+}
+/* 불릿 */
+#tab-menu2 > li::before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: block;
+    background: #568797;
+    border-radius: 50%;
+    z-index: 10;
+
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 불릿 배경 */
+#tab-menu2.tab-4 > li:first-child::after,
+#tab-menu2.tab-5 > li:last-child::after {
+    width: 50px;
+    height: 50px;
+    background-color: #9dc4b2;
+    opacity: .3;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    z-index: 1;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* #tab-menu2 .tab-4 .tab-5 > li:nth-child(-n+2)::after {
+    width: 50px;
+    height: 50px;
+    background-color: #9dc4b2;
+    opacity: .3;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    z-index: 1;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+.workplace {
+    display: flex;
+    padding: 110px 35px;
+    justify-content: space-around;
+}
+.workplace-box > h3 {
+    font-size: 25px;
+    font-family: 'omyu_pretty', sans-serif;
+}
+.workplace-box > p {
+    line-height: 1.8;
+    margin-top: 55px;
+    font-size: 17px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#turnover .workplace-box > p { padding-top: 20px;}
+
+/* 연관성 none 처리 */
+#correlation { display: none;}
+
+
+/* 포트폴리오 페이지 */
+#content4 {
+    width: 1200px;
+    /* background: #bbb; */
+    margin: 0 auto;
+    padding-top: 100px;
+}
+#content4 > h2 {
+    background: url(../images/background.png) no-repeat center;
+    background-size: 1000px 415px;
+    line-height: 600px;
+    text-align: center;
+    font-size: 70px;
+    color: #568797;
+    font-family: 'omyu_pretty', sans-serif;
+}
+
+/* 웹페이지 포트폴리오 나열 */
+/* #web-portfolio {
+    background: #aaf;
+} */
+#web-header {
+    font-size: 29px;
+    background: #e6f0ef;
+    padding: 25px 60px;
+    width: 200px;
+    border-radius: 40px;
+    text-align: center;
+    font-family: 'omyu_pretty', sans-serif;
+}
+#web-portfolio > ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    text-align: center;
+}
+#web-portfolio > ul > li > a { display: block;}
+#web-portfolio > ul > li > a > img {
+    width: 530px;
+    height: 410px;
+    border: 2px solid #e6f0ef;
+    border-radius: 60px;
+    margin-bottom: 10px;
+}
+.text {
+    background: #9dc4b2;
+    color: #fff;
+    border-radius: 40px;
+    line-height: 1.5;
+    padding: 10px;
+    font-size: 17px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.text > h4 {
+    font-weight: 700;
+    font-size: 19px;
+}
+/* 애니메이션 */
+#web-portfolio > ul > li > a > img { 
+    width: 100%;
+    transform: scale(0.9);
+}
+#web-portfolio > ul > li > a > img:hover {
+    animation-name: hoverEffect;
+    animation-duration: 500ms;
+}
+@keyframes hoverEffect {
+    form { }
+    50% { transform: scale(1);}
+    to { }
+}
+/* 작업 */
+#work {
+    /* background: #ffa; */
+    margin-top: 150px;
+}
+#work-header {
+    font-size: 29px;
+    background: #e6f0ef;
+    padding: 25px 60px;
+    width: 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-family: 'omyu_pretty', sans-serif;
+}
+#work > ul {
+    display: flex;
+    text-align: center;
+    margin: 90px auto;
+    justify-content: space-around;
+}
+#work > ul > li > a { display: block;}
+#work > ul > li > a > img {
+    width: 400px;
+    height: 300px;
+    border: 2px solid #e6f0ef;
+    border-radius: 70px;
+    margin-bottom: 10px;
+}
+/* 애니메이션 */
+#work > ul > li > a > img {
+    width: 100%;
+    transform: scale(0.9);
+}
+#work > ul > li > a > img:hover {
+    animation-name: hoverEffect;
+    animation-duration: 500ms;
+}
+@keyframes hoverEffect {
+    form { }
+    50% { transform: scale(1);}
+    to { }
+}
+
+/* TOP 버튼 */
+#top {
+    width: 1200px;
+    margin: 0 auto;
+    /* background: #ccc; */
+    text-align: center;
+    padding: 150px 0 40px 0;
+}
+#last {
+    font-size: 20px;
+    
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#last::after {
+    background: url(../images/button-low.png) no-repeat;
+    width: 50px;
+    height: 30px;
+    content: "";
+    display: block;
+    margin: 40px auto 10px;
+}
+#button {
+    background: #568797;
+    padding: 20px 35px;
+    border-radius: 30px;
+    color: #e6f0ef;
+    font-size: 18px;
+    display: inline-block;
+    margin: 30px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+ 
