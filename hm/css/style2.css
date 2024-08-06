@@ -9,7 +9,8 @@
 }
 
 a { text-decoration: none; color: inherit;}
-body { background: #f2f6f7; color: #333;}
+body { background: #f2f6f7; color: #333; min-height: 100vh;}
+html { height: 100%;}
 
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900 */
@@ -26,6 +27,10 @@ body { background: #f2f6f7; color: #333;}
     width: 100%;
     height: 200px;
     background: #bcd0e2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
 }
 #nav > nav {
     width: 1200px;
@@ -86,9 +91,11 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     display: flex;
     /* background-color: lightgoldenrodyellow; */
 }
-#nav-menu > a { display: block;}
-#nav-menu > a > img { margin-right: 30px;}
-#nav-menu > a:last-child > img { margin-right: 0;}
+#nav-menu > li { margin-right: 30px;}
+#nav-menu > li:last-child { margin-right: 0;}
+#nav-menu > li > a { display: block;}
+#nav-menu > li > a > img { width: 30px;}
+
 
 /* nav-bottom */
 #nav-bottom {
@@ -147,6 +154,8 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     text-decoration: underline;
 }
 
+#listpage, #expage { text-decoration: underline;}
+
 #sub-1, #sub-2, #sub-3, #sub-4, #sub-5, #sub-6 { display: none;}
 
 /* sub-1 : Women */
@@ -178,6 +187,7 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     display: flex;
     width: 1200px;
     margin: 40px auto;
+    padding-top: 200px;
 
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
@@ -194,58 +204,69 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
 #lnb > li:last-child { color: #cc071e;}
 
 /* 카테고리 */
-#product-box {
+#listproduct-box {
     width: 1200px;
     margin: 60px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-#product {
+#productButton {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    align-items: center;
+    position: relative;
 }
-#product > li:nth-child(5) { display: none;}
-#product > li:nth-child(6) { display: none;}
-#product > li > a {
-    display: block;
+#productList {
+    overflow: hidden;
+    width: 1000px;
+}
+#listproduct {
+    display: flex;
     text-align: center;
-    padding: 5px;
+}
+#listproduct > li > a {
+    display: block;
+    padding: 7px;
 
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-/* 버튼 */
-#product-box > button {
+#listproduct > li > a > img { 
+    display: block;
+    width: 235px;
+}
+#productButton > button {
+    background-color: transparent;
     border: none;
+    outline: none;
+    padding: 0;
     cursor: pointer;
-    width: 30px;
-    height: 40px;
-    margin-bottom: 10px;
 }
-#p-btn-left {
-    order: -1;
-    background: url(../images/listpage/button-left.svg) no-repeat center / 20px auto;
-}
-#p-btn-left > span {
+#productButton > button > span {
+    display: block;
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    display: block;
 }
-#p-btn-right { background: url(../images/listpage/button-right.svg) no-repeat center / 20px auto;}
-#p-btn-right > span {
+#list-next, #list-prev {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    display: block;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+}
+#list-next {
+    right: 0;
+    background: url(../images/listpage/hm-p-n.svg) no-repeat;
+    background-position: center;
+    background-size: 20px 35px;
+}
+#list-prev {
+    left: 0;
+    background: url(../images/listpage/hm-p-p.svg) no-repeat;
+    background-position: center;
+    background-size: 20px 35px;
 }
 
 /* 셔츠 & 블라우스 설명 */
@@ -253,6 +274,8 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     margin: 90px auto 60px;
     width: 1200px;
     text-align: center;
+
+    position: relative;
 }
 #comment > h2 {
     font-size: 25px;
@@ -297,6 +320,136 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     background: #cc071e;
     color: #fff;
 }
+/* 세부 필터 적용 팝업 */
+#modal {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 300;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#modal > span { 
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+#filter-popup {
+    background: #f2f6f7;
+    height: 90%;
+    width: 300px;
+    border: 3px solid #bcd0e2;
+    border-radius: 35px;
+    padding: 30px;
+    z-index: 400;
+
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    right: -10.5%;
+    transform: translate(-50%, -50%);
+}
+#filter-popup > h2 {
+    font-size: 23px;
+    color: #172244;
+    text-align: center;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+#filter-type {
+    margin: 25px 0 20px 0;
+    font-size: 13px;
+    
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#filter-type > li {
+    border-radius: 15px;
+    margin: 5px 0 5px 0;
+}
+#filter-type > li > button {
+    border: 1px solid #bcd0e2;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+    padding: 7px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    position: relative;
+}
+#filter-type > li > button::before {
+    background: url(../images/listpage/hm-popup.svg) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: block;
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    right: 7%;
+    transform: translate(50%);
+}
+#filter-type > li:last-child { margin: 0;}
+#filter-type > li > button:hover { background: #bcd0e2;}
+.filter-content {
+    border: 1px solid #bcd0e2;
+    border-radius: 15px;
+    margin-top: 3px;
+
+    display: none;
+}
+.filter-content > li { padding: 3px;}
+.filter-content > li:hover {
+    background-color: #bcd0e24f;
+    border-radius: 15px;
+}
+.filter-content > li > label {
+    display: inline-block;
+    cursor: pointer;
+}
+#buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 30px;
+}
+#buttons > button {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #bcd0e2;
+    border-radius: 20px;
+    color: #172244;
+    padding: 10px;
+    margin-bottom: 13px;
+    width: 300px;
+    cursor: pointer;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+#buttons > button:last-child { margin-bottom: 0;}
+#buttons > button:hover { background: #bcd0e2;}
+
 
 /* list */
 #list-shirt {

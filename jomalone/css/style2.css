@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+@font-face {
+    /* 고운돋움 */
+    font-family: 'GowunDodum-Regular'; /* sans-serif 추가 */
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a { text-decoration: none; color: inherit;}
+body { color: #333; background: #fff;}
+
+/* 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-kr-<uniquifier> {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} 
+*/
+
+/* top-banner */
+#top-banner {
+    width: 100%;
+    margin: 0 auto;
+    background: #35332b;
+    text-align: center;
+    color: #fff;
+
+    position: fixed;
+}
+#bannerButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: relative;
+}
+#topBanner {
+    width: 670px;
+    overflow: hidden;
+}
+#top-banner-content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 35px;
+}
+#top-banner-content > li > a {
+    display: block;
+    width: 650px;
+    font-size: 13px;
+    overflow: hidden;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* top-banner 버튼 */
+#bannerButtons > button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+#bannerButtons > button > span {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+#t-next, #t-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+}
+#t-next {
+    right: 25%;
+    background: url(../images/listpage/top-right.svg) no-repeat;
+    background-position: center;
+    background-size: 10px 15px;
+}
+#t-prev {
+    left: 25%;
+    background: url(../images/listpage/top-left.svg) no-repeat;
+    background-position: center;
+    background-size: 10px 15px;
+}
+
+
+/* 내비게이션 */
+#nav {
+    width: 100px;
+    height: 100vh;
+    background: transparent;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 100;
+
+    position: fixed;
+    
+    /* display: none; */
+}
+#nav:hover { background: #fcf9ee;}
+#headerleft {
+    height: 100%;
+    padding-top: 60px;
+}
+/* 내비게이션 내용 */
+#nav-bg {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+
+    position: fixed;
+    top: 0;
+    left: 100px;
+    bottom: 0;
+}
+#menu-box {
+    position: fixed;
+    top: 0;
+    background: #fcf9ee;
+    height: 100vh;
+    font-size: 25px;
+    padding: 120px 0 0 50px;
+    width: 270px;
+    z-index: 50;
+
+    display: none;
+
+    font-family: 'GowunDodum-Regular', sans-serif;
+}
+/* #gnb-inner { display: none;} */
+#gnb-inner > li > a {
+    margin-bottom: 20px;
+    display: block;
+    line-height: 50px;
+}
+#gnb-inner > li:hover > a,
+#gnb-inner > li > a:focus,
+#gnb-inner > li.on > a { color: #b3b3b3;}
+
+/* 서브메뉴 */
+.sub { display: none;}
+.sub {
+    position: absolute;
+    top: 0;
+    left: 320px;
+    width: 310px;
+    height: 100vh;
+    background: #fcf9ee;
+    font-size: 16px;
+    text-align: left;
+    padding: 30px 20px 20px 20px;
+    z-index: 30;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.sub > li > span {
+    font-size: 18px;
+    font-weight: 700;
+}
+.sub > li > span > a {
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+}
+.sub > li > a { display: block;}
+.list-sub { margin: 20px 0 30px 0;}
+.list-sub > li > a {
+    margin-bottom: 8px;
+    display: block;
+}
+.sub > li > span > a:hover,
+.list-sub > li > a:hover {
+    color: #35332b;
+    text-decoration: underline;
+}
+
+/* 햄버거 메뉴 */
+.menu {
+    width: 30px;
+    /* height: 25px; */
+    margin: 0 auto;
+    /* background-color: lightblue; */
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+    left: 0;
+    right: 0;
+
+    position: absolute;
+}
+.bar {
+    height: 3px;
+    background: #555;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: 0.9s;
+
+    text-indent: -9999px;
+}
+.menu.on > div:nth-child(1) { transform: translateY(11px) rotate(45deg);}
+.menu.on > div:nth-child(2) { opacity: 0;}
+.menu.on > div:nth-child(3) { transform: translateY(-11px) rotate(-45deg);}
+
+#listpage { text-decoration: underline;}
+
+
+/* 로고 */
+#logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+}
+#logo > a { display: block;}
+
+/* 아이콘 */
+#icons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+}
+#icons > li > a {
+    display: block;
+    margin-bottom: 30px;
+}
+#icons > li:last-child > a { margin-bottom: 0;}
+
+/* 스토리 */
+#story {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+    text-align: center;
+}
+#story > h2 {
+    font-size: 35px;
+
+    font-family: 'GowunDodum-Regular', sans-serif;
+}
+#story-biglist {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 90px 0 90px 0;
+    justify-content: center;
+    gap: 60px;
+    /* box-sizing: border-box; */
+}
+/* .list-left */
+.list-left {
+    display: flex;
+    align-items: center;
+    background: #e9ede9;
+}
+.list-left > li { width: 560px;}
+.list-left > li > a { display: block;}
+.list-left > li > a > img {
+    display: block;
+    width: 560px;
+}
+.list-bigtext > a > h3 { 
+    display: block;
+    font-size: 22px;
+    margin-bottom: 60px;
+    font-family: 'GowunDodum-Regular', sans-serif;
+}
+.list-bigtext > a > p {
+    display: block;
+    line-height: 1.6;
+    margin-bottom: 80px;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.btn-more {
+    border: none;
+    background: #35332b;
+    color: #fff;
+    padding: 13px 30px;
+    margin-top: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 50px;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.btn-more:hover { background: #707270;}
+
+/* #list-right */
+#list-right {
+    display: flex;
+    align-items: center;
+    background: #e9ede9;
+}
+#list-right > li { width: 560px;}
+#list-right > li > a { display: block;}
+#list-right > li > a > img {
+    display: block;
+    width: 560px;
+}
+#rightimg { 
+    display: flex;
+    order: 1;
+}
+
+/* story-list */
+#story-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 100px;
+    width: 1200px;
+    justify-content: center;
+    gap: 80px;
+}
+#story-list > ul {
+    background: #e9ede9;
+}
+#story-list > ul > li > a { display: block;}
+#story-list > ul > li > a > img { 
+    width: 560px;
+    height: 500px;
+    object-fit: cover;
+}
+.list-text {
+    padding: 20px;
+}
+.list-text > a > h3 {
+    font-size: 21px;
+    margin-bottom: 35px;
+
+    font-family: 'GowunDodum-Regular', sans-serif;
+}
+.list-text > a > p {
+    margin-bottom: 30px;
+    font-size: 15px;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* footer */
+#footer {
+    width: 100%;
+    background: #707270;
+    color: #fcf9ee;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#footer-box {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+/* footer-sns */
+#footer-sns {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+}
+#footer-sns > li { margin-left: 25px;}
+#footer-sns > li:first-child { margin-left: 0;}
+#footer-sns > li > a { display: block;}
+
+/* footer-menu */
+#footer-menu {
+    padding: 25px 0 25px 0;
+    border: 1px solid #f3eedc;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#f-menu-left { 
+    display: flex;
+    gap: 70px;
+}
+.f-menu > h4 {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.f-menu > ul > li > a {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.f-menu > ul > li:last-child > a { margin-bottom: 0;}
+#f-menu-right {
+    font-weight: 700;
+    text-align: right;
+}
+#f-menu-right > h4 > a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+/* /#footer-copyright */
+#footer-copyright {
+    padding-top: 25px;
+    font-size: 15px;
+}
+#footer-copyright > p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+#footer-copyright > p:last-child { margin-bottom: 0;}

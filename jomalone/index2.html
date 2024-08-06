@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JO MALONE list type</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../jomalone/css/reset.css">
+    <link rel="stylesheet" href="../jomalone/css/style2.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../jomalone/js/script2.js"></script>
+</head>
+<body>
+    <!-- top-banner -->
+    <section id="top-banner">
+        <div id="bannerButtons">
+            <div id="topBanner">
+                <ul id="top-banner-content">
+                    <li>
+                        <a href="#">
+                            25만원 이상 구매 시, 미니 드로잉 백과 배스 앤 바디 디럭스 샘플 15ml를 선물로 드립니다.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            센티드 메멘토 코롱 1종 구매 시, 벨벳 파우치를 선물로 드립니다.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            모든 구매 시 원하는 샘플 2종을 직접 선택하여 센트 레이어링을 경험해 보세요.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            센티드 메멘토 코롱 2종 이상 구매 시, 리미티드 스퀘어 박스 포장 서비스를 제공해드립니다.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            첫 구매 시, 잉글리쉬 페어 앤 프리지아 코롱 9ml를 선물로 드립니다. (쿠폰코드: WELCOME)
+                        </a>
+                    </li>
+                </ul>
+            </div> <!-- /#topBanner -->
+            <button type="button" id="t-next"><span>왼쪽 버튼</span></button>
+            <button type="button" id="t-prev"><span>오른쪽 버튼</span></button>
+        </div> <!-- /#bannerButtons -->
+    </section>
+    <!-- 내비게이션 -->
+    <header id="nav">
+        <nav>
+            <div id="headerleft">
+                <div class="menu">
+                    <div class="bar">바1</div>
+                    <div class="bar">바2</div>
+                    <div class="bar">바3</div>
+                </div> <!-- /.menu -->
+                <h1 id="logo">
+                    <a href="../jomalone/index1.html"><img src="images/mainpage/logo-jomalone.png" alt="jomalone"></a>
+                </h1>
+                <ul id="icons">
+                    <li><a href="#"><img src="images/mainpage/icons-basket.png" alt="basket"></a></li>
+                    <li><a href="#"><img src="images/mainpage/icons-mypage.png" alt="mypage"></a></li>
+                    <li><a href="#"><img src="images/mainpage/icons-search.png" alt="search"></a></li>
+                </ul>
+            </div> <!-- /#headerleft -->
+        </nav>
+    </header>
+    <div id="nav-bg">배경</div>
+    <div id="menu-box">
+        <ul id="gnb-inner">
+            <li><a href="#">Shopping</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">조말론 런던 앤 패딩턴</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">리미티드 오렌지 마멀레이드 코롱</a></li>
+                            <li><a href="#">리미티드 블랙베리 앤 베이 핸드 크림</a></li>
+                            <li><a href="#">패딩턴의 픽</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">새로운 글로벌 앰버서더, 톰 하디</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">톰 하디의 사이프러스 앤 그레이프바인</a></li>
+                            <li><a href="#">맨즈 에디션 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">블로썸 컬렉션</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">유자 제스트 코롱</a></li>
+                            <li><a href="#">옐로우 히비스커스 코롱</a></li>
+                            <li><a href="#">선릿 체리모야 코롱</a></li>
+                            <li><a href="#">컬렉션 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">소피아 리치가 사랑하는 프레그런스</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">잉글리쉬 페어 앤 스윗 피</a></li>
+                            <li><a href="#">우드 세이지 앤 씨 솔트</a></li>
+                            <li><a href="#">잉글리쉬 페어 앤 프리지아</a></li>
+                            <li><a href="#">블랙베리 앤 베이</a></li>
+                            <li><a href="#">넥타린 블로썸 앤 허니</a></li>
+                            <li><a href="#">라임 바질 앤 만다린</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>신제품 & 새소식</span>
+                        <ul class="list-sub">
+                            <li><a href="#">신제품 & 새소식 전체 보기</a></li>
+                            <li><a href="#">조말론 런던 앤 패딩턴</a></li>
+                            <li><a href="#">새로운 글로벌 앰버서더, 톰 하디</a></li>
+                            <li><a href="#">베스트셀러 보기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Men's edit</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">코롱</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">사이프러스 앤 그레이프바인 코롱</a></li>
+                            <li><a href="#">NEW 헌츠맨 컬렉션</a></li>
+                            <li><a href="#">코롱 인텐스</a></li>
+                            <li><a href="#">맨즈 코롱 컬렉션</a></li>
+                            <li><a href="#">코롱 인텐스 컬렉션</a></li>
+                            <li><a href="#">코롱 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">그루밍</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">바디 앤 핸드 워시</a></li>
+                            <li><a href="#">바디 앤 핸드 로션</a></li>
+                            <li><a href="#">익스 폴리에이팅 샤워 젤</a></li>
+                            <li><a href="#">그루밍 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">맨즈 홈 프레그런스</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">홈 프레그런스</a></li>
+                            <li><a href="#">우드 세이지 앤 씨 솔트 홈 캔들</a></li>
+                            <li><a href="#">라임 바질 앤 만다린 디퓨저</a></li>
+                            <li><a href="#">맨즈 홈 프레그런스 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>맨즈</span>
+                        <ul class="list-sub">
+                            <li><a href="#">그를 위한 기프트</a></li>
+                            <li><a href="#">센트 파인더</a></li>
+                            <li><a href="#">센트 레이어링</a></li>
+                            <li><a href="#">기프트 파인더</a></li>
+                            <li><a href="#">맨즈 전체 보기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Colognes</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">베스트셀러</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">블랙베리 앤 베이</a></li>
+                            <li><a href="#">잉글리쉬 페어 앤 프리지아</a></li>
+                            <li><a href="#">라임 바질 앤 만다린</a></li>
+                            <li><a href="#">사이프러스 앤 그레이프바인</a></li>
+                            <li><a href="#">다크 앰버 앤 진저릴리</a></li>
+                            <li><a href="#">우드 세이지 앤 씨 솔트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">사이즈</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">100ml</a></li>
+                            <li><a href="#">50ml</a></li>
+                            <li><a href="#">30ml</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">컬렉션</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">아카이브 컬렉션</a></li>
+                            <li><a href="#">앱솔뤼</a></li>
+                            <li><a href="#">코롱 인텐스</a></li>
+                            <li><a href="#">헌츠맨 컬렉션</a></li>
+                            <li><a href="#">블로썸 컬렉션</a></li>
+                            <li><a href="#">센티드 메멘토</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">센트 패밀리</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">시트러스</a></li>
+                            <li><a href="#">프루티</a></li>
+                            <li><a href="#">라이트 플로랄</a></li>
+                            <li><a href="#">플로랄</a></li>
+                            <li><a href="#">우디</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>새로운 리미티드 에디션 센트</span>
+                        <ul class="list-sub">
+                            <li><a href="#">조말론 런던 앤 패딩턴</a></li>
+                            <li><a href="#">센트 파인더</a></li>
+                            <li><a href="#">센트 레이어링</a></li>
+                            <li><a href="#">기프트 파인더</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Home & Candles</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">캔들</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">캔들 전체 보기</a></li>
+                            <li><a href="#">타운하우스 캔들</a></li>
+                            <li><a href="#">채리티 캔들</a></li>
+                            <li><a href="#">캔들 케어 에센셜</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">디퓨저</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">디퓨저</a></li>
+                            <li><a href="#">타운하우스 디퓨저</a></li>
+                            <li><a href="#">카 디퓨저</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">스프레이</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">룸 스프레이</a></li>
+                            <li><a href="#">필로우 미스트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">홈 컬렉션</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">나이트 컬렉션</a></li>
+                            <li><a href="#">타운하우스 컬렉션</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>홈 프레그런스</span>
+                        <ul class="list-sub">
+                            <li><a href="#">베스트셀러</a></li>
+                            <li><a href="#">센트 파인더</a></li>
+                            <li><a href="#">센트 레이어링</a></li>
+                            <li><a href="#">기프트 파인더</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Bath & Body</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">배스 앤 샤워</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">바디 앤 핸드 워시</a></li>
+                            <li><a href="#">샤워 젤 앤 오일</a></li>
+                            <li><a href="#">배스 오일</a></li>
+                            <li><a href="#">솝</a></li>
+                            <li><a href="#">헤어 케어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">바디 케어</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">바디 크림</a></li>
+                            <li><a href="#">바디 앤 핸드 로션</a></li>
+                            <li><a href="#">바디 미스트</a></li>
+                            <li><a href="#">핸드 크림</a></li>
+                            <li><a href="#">헤어 미스트</a></li>
+                            <li><a href="#">비타민 E 컬렉션</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">페이스 케어</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">립 케어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">베스트셀러</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">라임 바질 앤 만다린 바디 앤 핸드 워시</a></li>
+                            <li><a href="#">잉글리쉬 페어 앤 프리지아 바디 앤 핸드 로션</a></li>
+                            <li><a href="#">비타민 E 컨디셔너</a></li>
+                            <li><a href="#">배스 앤 바디 베스트셀러 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>배스 앤 바디</span>
+                        <ul class="list-sub">
+                            <li><a href="#">베스트셀러</a></li>
+                            <li><a href="#">센트 파인더</a></li>
+                            <li><a href="#">센트 레이어링</a></li>
+                            <li><a href="#">기프트 파인더</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Gifts</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">선물</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">기프트 파인더</a></li>
+                            <li><a href="#">센트 파인더</a></li>
+                            <li><a href="#">센트 레이어링</a></li>
+                            <li><a href="#">그를 위한 기프트</a></li>
+                            <li><a href="#">리틀 럭셔리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">퍼스널라이제이션</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">컬러 캡</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">베스트셀러</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">트래븡 코롱 듀오</a></li>
+                            <li><a href="#">잉글리쉬 페어 앤 프리지아 홈 컬렉션</a></li>
+                            <li><a href="#">우드 세이지 앤 씨 솔트 카 디퓨저</a></li>
+                            <li><a href="#">우드 앤 허니 듀오</a></li>
+                            <li><a href="#">블랙베리 앤 베이 기프트 세트</a></li>
+                            <li><a href="#">필로우 미스트 듀오</a></li>
+                            <li><a href="#">베스트셀러 전체 보기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>즐거운 기분을 선사하는 선물</span>
+                        <ul class="list-sub">
+                            <li><a href="#">패딩턴처럼 사랑스러운 기프트</a></li>
+                            <li><a href="#">온라인 부티크의 특별한 서비스</a></li>
+                            <li><a href="#">상담 예약하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a>
+                <ul class="sub">
+                    <li>
+                        <span><a href="#">매장 서비스</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">매장 서비스 예약하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span><a href="#">조 말론 런던 하우스</a></span>
+                        <ul class="list-sub">
+                            <li><a href="#">우리의 가치</a></li>
+                            <li><a href="#">우리의 사람 & 우리의 일터</a></li>
+                            <li><a href="#">우리의 자선활동 미션</a></li>
+                            <li><a href="#">지속가능성을 위한 우리의 활동</a></li>
+                            <li><a href="#" id="listpage">스토리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div> <!-- /#menu-box -->
+    <!-- story -->
+    <section id="story"> 
+        <h2>스토리</h2>
+        <div id="story-biglist">
+            <ul class="list-left">
+                <li><a href="../jomalone/index3.html"><img src="images/listpage/story1.jpg" alt="센티드메멘토"></a></li>
+                <li><a href="#">
+                    <div class="list-bigtext">
+                        <h3>센티드 메멘토</h3>
+                        <p>
+                            영국의 앤티크 마켓에서 영감을 받아<br>
+                            탄생한 다채로운 향기의 이야기
+                        </p>
+                        <a href="../jomalone/index3.html" class="btn-more">view more</a>
+                    </div>
+                </a></li>
+            </ul> <!-- /.list-left -->
+            <ul id="list-right">
+                <li id="rightimg"><a href="#"><img src="images/listpage/story2.jpg" alt="잉글리쉬페어"></a></li>
+                <li><a href="#">
+                    <div class="list-bigtext">
+                        <h3>잉글리쉬 페어를 향한 찬가</h3>
+                        <p>
+                            새로운 잉글리쉬 페어 프레그런스의<br>
+                            비하인드 스토리
+                        </p>
+                        <a href="#" class="btn-more">view more</a>
+                    </div>
+                </a></li>
+            </ul> <!-- /#list-right -->
+            <ul class="list-left">
+                <li><a href="#"><img src="images/listpage/story3.jpg" alt="이광호작가"></a></li>
+                <li><a href="#">
+                    <div class="list-bigtext">
+                        <h3>이광호 작가</h3>
+                        <p>
+                            이광호 작가의 작업실로의 초대
+                        </p>
+                        <a href="#" class="btn-more">view more</a> 
+                    </div>
+                </a></li>
+            </ul> <!-- /.list-left -->
+        </div>
+        <div id="story-list">
+            <ul>
+                <li><a href="#"><img src="images/listpage/story4.jpg" alt="크리스마스"></a></li>
+                <li><a href="#">
+                    <div class="list-text">
+                        <h3>조 말론 런던으로 크리스마스 준비하기</h3>
+                        <p>
+                            완벽한 크리스마스 호스트가 되기 위한 방법
+                        </p> 
+                        <a href="#" class="btn-more">view more</a>
+                    </div>
+                </a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><img src="images/listpage/story5.png " alt="카디퓨저"></a></li>
+                <li><a href="#">
+                    <div class="list-text">
+                        <h3>카 디퓨저</h3>
+                        <p>
+                            내 차를 향기로운 공간으로 만드는 방법
+                        </p> 
+                        <a href="#" class="btn-more">view more</a>
+                    </div>
+                </a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><img src="images/listpage/story6.png " alt="선물"></a></li>
+                <li><a href="#">
+                    <div class="list-text">
+                        <h3>향기로운 선물</h3>
+                        <p>
+                            기억에 남는 좋은 선물 고르기
+                        </p> 
+                        <a href="#" class="btn-more">view more</a>
+                    </div>
+                </a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><img src="images/listpage/story7.png " alt="여행용"></a></li>
+                <li><a href="#">
+                    <div class="list-text">
+                        <h3>여행용 코롱 & 캔들</h3>
+                        <p>
+                            여행용 프레그런스 제품으로 더 멋진 휴가를 즐겨보세요
+                        </p> 
+                        <a href="#" class="btn-more">view more</a>
+                    </div>
+                </a></li>
+            </ul>
+        </div> <!-- /#story-list -->
+    </section>
+    <!-- footer -->
+    <footer id="footer">
+        <div id="footer-box">
+            <ul id="footer-sns">
+                <li><a href="#"><img src="images/mainpage/footer-insta.png" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="images/mainpage/footer-facebook.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="images/mainpage/footer-youtube.png" alt="유튜브"></a></li>
+            </ul>
+            <div id="footer-menu">
+                <div id="f-menu-left">
+                    <div class="f-menu">
+                        <h4>고객서비스</h4>
+                        <ul>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">고객관리지원팀</a></li>
+                            <li><a href="#">나의 프로필</a></li>
+                            <li><a href="#">나의 오더</a></li>
+                            <li><a href="#">주문 조회</a></li>
+                            <li><a href="#">교환 및 환불 규정</a></li>
+                            <li><a href="#">온라인 부티크 쇼핑</a></li>
+                        </ul>
+                    </div> <!-- /.f-menu -->
+                    <div class="f-menu">
+                        <h4>살펴보기</h4>
+                        <ul>
+                            <li><a href="#">매장 안내</a></li>
+                            <li><a href="#">조 말론 런던의 자선 임무</a></li>
+                            <li><a href="#">친절함의 문화</a></li>
+                            <li><a href="#">우리의 사람 & 우리의 일터</a></li>
+                            <li><a href="#">지속가능성을 위한 우리의 활동</a></li>
+                            <li><a href="#">원료</a></li>
+                        </ul>
+                    </div> <!-- /.f-menu -->
+                    <div class="f-menu">
+                        <h4>회사 소개</h4>
+                        <ul>
+                            <li><a href="#">법인 정보</a></li>
+                            <li><a href="#">커리어</a></li>
+                        </ul>
+                    </div> <!-- /.f-menu -->
+                </div> <!-- /#f-menu-left -->
+                <div id="f-menu-right">
+                    <h4><a href="#">이용약관</a></h4>
+                    <h4><a href="#">개인정보 처리방침</a></h4>
+                </div> <!-- /#f-menu-right -->
+            </div> <!-- /#footer-menu -->
+            <div id="footer-copyright">
+                <p>
+                    &copy; Jo Malone London 2021
+                </p>
+                <p>
+                    이엘씨에이한국(유) 대표: Teng, Hsiao-Hua (Catherine), 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232 | 사업자등록번호: 211-81-71889 |<br>
+                    통신판매업신고번호: 강남-15737호 | 사업자정보조회 | 고객관리지원팀: (02) 6971-3228  |  호스팅서비스 사업자: ㈜엘지유플러스
+                </p>
+            </div> <!-- /#footer-copyright -->
+        </div>
+    </footer>
+</body>
+</html>

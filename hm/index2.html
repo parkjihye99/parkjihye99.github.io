@@ -6,9 +6,8 @@
     <title>H&M list type</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../hm/css/reset.css">
-    <link rel="stylesheet" href="../hm/css/style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../hm/js/script2.js"></script>
 </head>
@@ -22,12 +21,12 @@
                     <input type="text" placeholder="제품 검색">
                 </form>
                 <header id="nav-logo">
-                    <a href="../hm/index.html"><img src="images/mainpage/h&m-logo.png" alt="hmlogo"></a>
+                    <a href="../hm/index1.html"><img src="images/mainpage/h&m-logo.png" alt="hmlogo"></a>
                 </header>
                 <ul id="nav-menu">
-                    <a href="#"><img src="images/mainpage/nav-mypage.png" alt="mypage"></a>
-                    <a href="#"><img src="images/mainpage/nav-basket.png" alt="basket"></a>
-                    <a href="#"><img src="images/mainpage/nav-like.png" alt="like"></a>
+                    <li><a href="#"><img src="images/mainpage/nav-mypage.png" alt="mypage"></a></li>
+                    <li><a href="#"><img src="images/mainpage/nav-basket.png" alt="basket"></a></li>
+                    <li><a href="#"><img src="images/mainpage/nav-like.png" alt="like"></a></li>
                 </ul>
             </div>
             <ul id="nav-bottom">
@@ -62,7 +61,7 @@
                                     <li><a href="#">코트 & 재킷</a></li>
                                     <li><a href="#">블레이저 & 정장 조끼</a></li>
                                     <li><a href="#">가디건 & 스웨터</a></li>
-                                    <li><a href="#">셔츠 & 블라우스</a></li>
+                                    <li><a href="#" id="listpage">셔츠 & 블라우스</a></li>
                                     <li><a href="#">후드티 & 스웨트셔츠</a></li>
                                     <li><a href="#">탑 & 티셔츠</a></li>
                                     <li><a href="#">점프수트</a></li>
@@ -404,7 +403,7 @@
                             <li>
                                 <span>H&M이 하는 일</span>
                                 <ul>
-                                    <li><a href="../hm/index3.html">Let's innovate</a></li>
+                                    <li><a href="../hm/index3.html" id="expage">Let's innovate</a></li>
                                     <li><a href="#">Let's be fair</a></li>
                                     <li><a href="#">Let's be for all</a></li>
                                     <li><a href="#">Let's be transparent</a></li>
@@ -452,35 +451,39 @@
         </ol>
     </nav>
     <!-- 카테고리 -->
-    <section id="product-box">
-        <ul id="product">
-            <li>
-                <a href="#"><img src="images/listpage/product-1coat.jpg" alt="코트아우터"></a>
-                <a href="#"><span>코트/아우터</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="images/listpage/product-2pants.jpg" alt="바지"></a>
-                <a href="#"><span>바지</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="images/listpage/product-3dress.jpg" alt="드레스"></a>
-                <a href="#"><span>드레스</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="images/listpage/product-4skirt.jpg" alt="스커트"></a>
-                <a href="#"><span>스커트</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="images/listpage/product-5shoes.jpg" alt="슈즈"></a>
-                <a href="#"><span>슈즈</span></a>
-            </li>
-            <li>
-                <a href="#"><img src="images/listpage/product-6bag.jpg" alt="악세서리"></a>
-                <a href="#"><span>악세서리</span></a>
-            </li>
-        </ul>
-        <button id="p-btn-left"><span>왼쪽버튼</span></button>
-        <button id="p-btn-right"><span>오른쪽버튼</span></button>
+    <section id="listproduct-box">
+        <div id="productButton">
+            <div id="productList">
+                <ul id="listproduct">
+                    <li>
+                        <a href="#"><img src="images/listpage/product-1coat.jpg" alt="코트아우터"></a>
+                        <a href="#"><span>코트/아우터</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/listpage/product-2pants.jpg" alt="바지"></a>
+                        <a href="#"><span>바지</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/listpage/product-3dress.jpg" alt="드레스"></a>
+                        <a href="#"><span>드레스</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/listpage/product-4skirt.jpg" alt="스커트"></a>
+                        <a href="#"><span>스커트</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/listpage/product-5shoes.jpg" alt="슈즈"></a>
+                        <a href="#"><span>슈즈</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/listpage/product-6bag.jpg" alt="악세서리"></a>
+                        <a href="#"><span>악세서리</span></a>
+                    </li>
+                </ul>
+            </div> <!-- /#productList -->
+            <button type="button" id="list-next"><span>왼쪽버튼</span></button>
+            <button type="button" id="list-prev"><span>오른쪽버튼</span></button>
+        </div> <!-- /#productButton -->
     </section>
     <section id="comment">
         <h2>여성 블라우스 & 셔츠</h2>
@@ -492,8 +495,300 @@
             우아한 스타일의 아이템을 다양하게 연출해보세요. 특별한 장소에 어울리는 예쁜 브로데리 앙글레즈 소재뿐만 아니라<br> 
             면 외의 다양한 소재로 만든 사랑스러운 오프숄더 블라우스를 확인해보세요. <a href="#">퍼프 소매 탑</a>에서 다양한 아이템을 확인하세요.
         </p>
-        <button id="filter">세부 필터 적용</button>
+        <button type="button" id="filter">세부 필터 적용</button>
     </section>
+    <div id="modal"><span>오버레이배경</span></div> <!-- /#modal -->
+    <div id="filter-popup">
+        <h2>세부 필터 적용</h2>
+        <ul id="filter-type">
+            <li>
+                <button type="button" data-index="0">정렬 기준</button>
+                <ul class="filter-content on" data-index="0">
+                    <li>
+                        <input type="radio" name="sort" value="recommend" id="recommend">
+                        <label for="recommend">추천</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="sort" value="recent" id="recent">
+                        <label for="recent">최신</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="sort" value="lowprice" id="lowprice">
+                        <label for="lowprice">낮은 가격</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="sort" value="highprice" id="highprice">
+                        <label for="highprice">높은 가격</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="1">컬러</button>
+                <ul class="filter-content" data-index="1">
+                    <li>
+                        <input type="checkbox" name="color" value="gray" id="gray">
+                        <label for="gray">그레이</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="green" id="green">
+                        <label for="green">그린</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="red" id="red">
+                        <label for="red">레드</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="multicolor" id="multicolor">
+                        <label for="multicolor">멀티컬러</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="beige" id="beige">
+                        <label for="beige">베이지</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="black" id="black">
+                        <label for="black">블랙</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="blue" id="blue">
+                        <label for="blue">블루</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="yellow" id="yellow">
+                        <label for="yellow">옐로우</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="orange" id="orange">
+                        <label for="orange">오렌지</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="pink" id="pink">
+                        <label for="pink">핑크</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" value="white" id="white">
+                        <label for="white">화이트</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="2">사이즈</button>
+                <ul class="filter-content" data-index="2">
+                    <li>
+                        <input type="checkbox" name="size" value="32" id="32">
+                        <label for="32">32</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="XXS" id="XXS">
+                        <label for="XXS">XXS</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="XS" id="XS">
+                        <label for="XS">XS</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="S" id="S">
+                        <label for="S">S</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="M" id="M">
+                        <label for="M">M</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="L" id="L">
+                        <label for="L">L</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="XL" id="XL">
+                        <label for="XL">XL</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="size" value="XXL" id="XXL">
+                        <label for="XXL">XXL</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="3">소매 길이</button>
+                <ul class="filter-content" data-index="3">
+                    <li>
+                        <input type="checkbox" name="sleeve" value="7" id="7">
+                        <label for="7">7부 소매</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="sleeve" value="long" id="long">
+                        <label for="long">긴소매</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="sleeve" value="longlong" id="longlong">
+                        <label for="longlong">롱 소매</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="sleeve" value="short" id="short">
+                        <label for="short">반소매</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="sleeve" value="sleeveless" id="sleeveless">
+                        <label for="sleeveless">슬리브리스</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="4">소재</button>
+                <ul class="filter-content" data-index="4">
+                    <li>
+                        <input type="checkbox" name="material" value="denim" id="denim">
+                        <label for="denim">데님</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="dobby" id="dobby">
+                        <label for="dobby">도비직</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="race" id="race">
+                        <label for="race">레이스</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="rayon" id="rayon">
+                        <label for="rayon">레이온</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="linen" id="linen">
+                        <label for="linen">리넨</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="cotton" id="cotton">
+                        <label for="cotton">면</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="satin" id="satin">
+                        <label for="satin">새틴</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="slik" id="slik">
+                        <label for="slik">실크</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="oxford" id="oxford">
+                        <label for="oxford">옥스포드</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="corduroy" id="corduroy">
+                        <label for="corduroy">코듀로이</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="material" value="poly" id="poly">
+                        <label for="poly">폴리우레탄</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="5">제품 종류</button>
+                <ul class="filter-content" data-index="5">
+                    <li>
+                        <input type="checkbox" name="product" value="blouse" id="blouse">
+                        <label for="blouse">블라우스</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="product" value="shirt" id="shirt">
+                        <label for="shirt">셔츠</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="6">패턴</button>
+                <ul class="filter-content" data-index="6">
+                    <li>
+                        <input type="checkbox" name="pattern" value="solid" id="solid">
+                        <label for="solid">단색</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pattern" value="stripe" id="stripe">
+                        <label for="stripe">스트라이프</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pattern" value="pattern" id="pattern">
+                        <label for="pattern">패턴</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pattern" value="paisley" id="paisley">
+                        <label for="paisley">페이즐리</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pattern" value="floral" id="floral">
+                        <label for="floral">플로럴</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pattern" value="pin" id="pin">
+                        <label for="pin">핀 스트라이프</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="7">네크라인</button>
+                <ul class="filter-content" data-index="7">
+                    <li>
+                        <input type="checkbox" name="neckline" value="v" id="v">
+                        <label for="v">V넥</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="deep" id="deep">
+                        <label for="deep">딥 플런지 네크라인</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="round" id="round">
+                        <label for="round">라운드넥</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="boat" id="boat">
+                        <label for="boat">보트 네크라인</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="sweet" id="sweet">
+                        <label for="sweet">스위트하트 네크라인</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="oblong" id="oblong">
+                        <label for="oblong">오블롱 네크라인</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="cowl" id="cowl">
+                        <label for="cowl">카울넥</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="neckline" value="plunging" id="plunging">
+                        <label for="plunging">플런징</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" data-index="8">핏</button>
+                <ul class="filter-content" data-index="8">
+                    <li>
+                        <input type="checkbox" name="pit" value="regular" id="regular">
+                        <label for="regular">레귤러핏</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pit" value="loose" id="loose">
+                        <label for="loose">루즈핏</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pit" value="slim" id="slim">
+                        <label for="slim">슬림핏</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="pit" value="over" id="over">
+                        <label for="over">오버사이즈</label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div id="buttons">
+            <button type="button" id="result">결과 보기</button>
+            <button type="button" id="reset">초기화</button>
+            <button type="button" id="close">닫기</button>
+        </div> <!-- /#buttons -->
+    </div> <!-- /#filter-popup -->
     <ul id="list-shirt">
         <li>
             <a href="#"><img src="images/listpage/listproduct-1.png" alt="멀티스타일크링클셔츠"></a>

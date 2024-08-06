@@ -181,104 +181,254 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
 /* sub-6 : About */
 /* #sub-1, #sub-2, #sub-3, #sub-4, #sub-5 { display: none;} */
 
-/* 로컬네비게이션 */
-#lnb { 
-    display: flex;
-    width: 1200px;
-    margin: 40px auto;
-    padding-top: 200px;
+/* 메인배너 */
 
-    font-family: "Noto Sans KR", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+#page {
+    height: 100%;
+    padding-top: 200px;
 }
-#lnb > li {
-    margin-right: 15px;
-}
-#lnb > li > a { 
-    background: url(../images/listpage/localnav.png) no-repeat right center / 11px auto;
-    padding-right: 30px;
+/* #page > li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+#page > li > img {
+    /* height: 1027px; */
     display: block;
 }
-#lnb > li:last-child { color: #cc071e;}
 
-/* innovate */
-#innovate {
-    margin: 0 auto;
+/* 제품 카테고리 */
+#product-box {
     width: 1200px;
+    margin: 70px auto;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* overflow: hidden; */
 }
-/* innovate-1 */
-#innovate-1 {
+#product-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#product-img {
+    overflow: hidden;
+    width: 1055px;
+}
+#product {
+    display: flex;
+    width: calc(700% / 4);
+    /* justify-content: space-around; */
+    /* padding: 50px 0 50px 0; */
+}
+#product > li > a {
+    display: block;
     text-align: center;
+    padding: 7px;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#product > li > a > img { width: 250px;}
+#product-slide > button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+}
+#product-slide > button > span {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+#p-next, #p-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+}
+#p-next {
+    right: 0;
+    background: url(../images/mainpage/button-right.svg) no-repeat;
+    background-position: center;
+    background-size: 30px 45px;
+}
+#p-prev {
+    left: 0;
+    background: url(../images/mainpage/button-left.svg) no-repeat;
+    background-position: center;
+    background-size: 30px 45px;
+}
+
+/* spring section */
+#spring-box {
     width: 1200px;
-    margin-bottom: 80px;
+    margin: 20px auto;
+    display: flex;
 }
-#innovate-1 > img {width: 1200px;}
-#innovate-1 > h2 {
-    font-size: 28px;
-    text-align: center;
-    /* margin: 20px auto 40px; */
-    padding: 20px 0 40px 0;
+#spring-box > img {
+    width: 590px;
+    margin-right: 20px;
+    height: 100%;
+}
+#spring-content { width: 100%;}
+#spring-header { text-align: center;}
+#spring-header > h2 {
+    font-size: 40px;
+    color: #172244;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: left;
 
     font-family: 'TheJamsil5Bold', sans-serif;
 }
-#innovate-1 > p {
+/* 버튼 - 모두보기 */
+#btn-all {
+    border: 1px solid #cc071e;
+    padding: 15px 20px 15px 20px;
+    line-height: 55px;
+    background: transparent;
+    border-radius: 30px;
     text-align: center;
-    line-height: 1.8;
+    color: #cc071e;
+    font-size: 15px;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+#btn-all:hover {
+    background: #cc071e;
+    color: #fff;
+}
+#spring-btnbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    position: relative;
+}
+#spring-slide { 
+    overflow: hidden;
+    width: 360px;
+}
+#spring-product {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    width: calc(600% / 1);
+}
+#spring-product > li > a { display: block;}
+#spring-product > li > a > img {
+    display: block;
+    border: 1px solid #bcd0e2;
+    box-sizing: border-box;
+    width: 350px;
+    border-radius: 80px;
+}
+.spring-text {
+    margin-top: 10px;
 
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-/* innovate-2 */
-#innovate-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#innovate-p {
-    line-height: 1.8;
+.spring-text > h4 {
+    margin-bottom: 5px;
 
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
-#innovate-p > p:first-child { margin-bottom: 60px;}
+#spring-btnbox > button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+#spring-btnbox > button > span {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+#s-next, #s-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+#s-next:hover, #s-prev:hover { filter: invert(11%) sepia(100%) saturate(4557%) hue-rotate(351deg) brightness(98%) contrast(91%);}
+#s-next {
+    right: 0;
+    background: url(../images/mainpage/spring-right.svg) no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
+#s-prev {
+    left: 0;
+    background: url(../images/mainpage/spring-left.svg) no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
 
-/* innovate-list */
-#innovate-list {
-    margin: 110px auto;
-    width: 1100px;
-}
-#innovate-list > li {
+/* rokh section */
+#rokh-box {
+    margin: 100px auto;
+    width: 1200px;
+    /* background-color: #aaa; */
     display: flex;
-    margin-bottom: 70px;
-    text-align: center;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
-#innovate-list > li:last-child { margin-bottom: 0;}
-#innovate-list > li > a { display: block;}
-#innovate-list > li > a > img { width: 440px;}
-.list-text { width: 540px;}
-.list-text > a > h3 {
+#rokh-content {
+    text-align: center;
+    padding: 20px;
+}
+#rokh-content > h2 {
+    font-size: 40px;
+    color: #172244;
+    margin-bottom: 25px;
+
+    font-family: 'TheJamsil5Bold', sans-serif;
+}
+#rokh-content > h3 {
     font-size: 23px;
-    margin-bottom: 20px;
+    color: #172244;
+    margin-bottom: 40px;
 
-    font-family: 'TheJamsil5Bold', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
-.list-text > a > p {
-    line-height: 1.6;
-    margin-bottom: 70px;
+#rokh-content > p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 50px;
 
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
+/* 버튼 - 자세히 보기 */
 #btn-detail {
     border: 1px solid #cc071e;
     padding: 15px 20px 15px 20px;
@@ -298,6 +448,14 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     background: #cc071e;
     color: #fff;
 }
+/* innovate banner */
+#innovate-banner {
+    width: 1200px;
+    margin: auto;
+}
+#innovate-banner > a { display: block;}
+#innovate-banner > a > img { display: block;}
+
 /* footer */
 #footer {
     width: 100%;
