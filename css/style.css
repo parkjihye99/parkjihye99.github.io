@@ -111,6 +111,7 @@ body { background: #fff; width: 100%; color: #333;}
     background-color: #568797;
     border-radius: 50%;
     z-index: 10;
+    cursor: pointer;
 
     position: absolute;
     left: -10px;
@@ -164,7 +165,7 @@ body { background: #fff; width: 100%; color: #333;}
 #introduce-name {
     font-family: 'omyu_pretty', sans-serif;
     font-size: 25px;
-    padding: 15px 0 0 30px;
+    padding: 15px 0 0 40px;
 }
 #hobby {
     display: flex;
@@ -400,7 +401,7 @@ body { background: #fff; width: 100%; color: #333;}
     border: none;
     background: transparent;
     font-size: 17px;
-    padding: 30px;
+    padding-top: 20px;
     color: #666;
 
     font-family: "IBM Plex Sans KR", sans-serif;
@@ -409,7 +410,15 @@ body { background: #fff; width: 100%; color: #333;}
 }
 .popup-box > h2 {
     font-size: 25px;
-    padding-top: 25px;
+    padding-top: 20px;
+
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.popup-box > h3 {
+    font-size: 18px;
+    padding-top: 15px;
 
     font-family: "IBM Plex Sans KR", sans-serif;
     font-weight: 600;
@@ -480,6 +489,7 @@ body { background: #fff; width: 100%; color: #333;}
     background: #568797;
     border-radius: 50%;
     z-index: 10;
+    cursor: pointer;
 
     position: absolute;
     left: -10px;
@@ -633,6 +643,8 @@ body { background: #fff; width: 100%; color: #333;}
 }
 #work > ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
     text-align: center;
     margin: 90px auto;
     justify-content: space-around;
@@ -644,6 +656,7 @@ body { background: #fff; width: 100%; color: #333;}
     border: 2px solid #e6f0ef;
     border-radius: 70px;
     margin-bottom: 10px;
+    display: block;
 }
 /* 애니메이션 */
 #work > ul > li > a > img {
@@ -659,6 +672,96 @@ body { background: #fff; width: 100%; color: #333;}
     50% { transform: scale(1);}
     to { }
 }
+/* 오버레이 */
+#overlay {
+    position: fixed;
+    top: 0; right: 0; left: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+
+    display: none;
+}
+#overlay > button,
+#overlayClose > button {
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+#overlay > button > span,
+#overlayClose > button > span {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+#overlayClose {
+    position: fixed;
+    top: 0; right: 0; left: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+
+    display: none;
+}
+.close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+
+    background: url(../images/close.svg) no-repeat;
+}
+.close:hover { opacity: 1;}
+
+#next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 12%;
+
+    background: url(../images/overlay-right.svg) no-repeat;
+    background-size: 80px 80px;
+    background-position: center;
+}
+
+#prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 12%;
+
+    background: url(../images/overlay-left.svg) no-repeat;
+    background-size: 80px 80px;
+    background-position: center;
+}
+#next, #prev {
+    opacity: 0.3;
+    transition-duration: 100ms;
+}
+#next:hover, #prev:hover { opacity: 1;}
+
+#photo, #m-photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    max-width: 80%;
+    max-height: 80%;
+
+    display: none;
+}
+
+#museum > li > img { display: none;}
 
 /* TOP 버튼 */
 #top {

@@ -18,7 +18,7 @@
         <nav>
             <h1><a href="#"><img src="images/home.png" alt="home"></a></h1>
             <ul>
-                <li><a href="#content2">성격</a></li>
+                <li><a href="#content2">MBTI</a></li>
                 <li><a href="#content3">이직 이유 & 전 직장과의 연관성</a></li>
                 <li><a href="#content4">포트폴리오</a></li>
             </ul>
@@ -38,7 +38,7 @@
                 <!-- 소개, 학력, 연락처 탭 -->
                 <div id="box-introduce">
                     <h2 id="introduce-name">
-                        웹디자이너 박지혜입니다
+                        안녕하세요! 웹디자이너 박지혜입니다.
                     </h2>
                     <ul id="hobby">
                         <li>
@@ -120,7 +120,6 @@
                 <!-- 학력 끝 -->
                 <!-- 연락처 -->
                 <div id="box-contact">
-                    <!-- ul로 변경 ** -->
                     <ul id="contact-box">
                         <li>
                             <img src="images/phone.png" alt="폰">
@@ -138,28 +137,16 @@
     <!-- 성격페이지 -->
     <section id="content2">
         <div id="personality-box">
-            <h2>성격</h2>
+            <!-- <h2>성격</h2> -->
+            <h2>MBTI</h2>
             <ul>
                 <li id="personality-pp1">
                     <img src="images/heart.png" alt="하트1">
                     <div id="personality-popup1">
                         <div class="popup-box">
-                            <h2>공감력 & 통찰력</h2>
-                            <img src="images/imotikon-eyes.png" alt="눈">
-                            <p>
-                                감정적으로 민감하고 다른 사람의 감정에<br>
-                                공감하는 능력이 뛰어나 친구들의 감정을<br>
-                                먼저 눈치 채거나, 상담을 자주 받아줌
-                            </p>
-                        </div>
-                        <button class="popup-button">닫기</button>
-                    </div>
-                </li>
-                <li id="personality-pp2">
-                    <img src="images/heart.png" alt="하트2">
-                    <div id="personality-popup2">
-                        <div class="popup-box">
-                            <h2>책임감 & 의지력</h2>
+                            <!-- <h2>책임감 & 의지력</h2> -->
+                            <h2>N</h2>
+                            <h3>( 책임감 & 의지력 )</h3>
                             <img src="images/imotikon-power.png" alt="힘">
                             <p>
                                 맡은 일은 무조건 끝을 보는 성격.<br>
@@ -170,11 +157,30 @@
                         <button class="popup-button">닫기</button>
                     </div>
                 </li>
+                <li id="personality-pp2">
+                    <img src="images/heart.png" alt="하트2">
+                    <div id="personality-popup2">
+                        <div class="popup-box">
+                            <!-- <h2>공감력 & 통찰력</h2> -->
+                            <h2>F</h2>
+                            <h3>( 공감력 & 통찰력 )</h3>
+                            <img src="images/imotikon-eyes.png" alt="눈">
+                            <p>
+                                감정적으로 민감하고 다른 사람의 감정에<br>
+                                공감하는 능력이 뛰어나 친구들의 감정을<br>
+                                먼저 눈치 채거나, 상담을 자주 받아줌
+                            </p>
+                        </div>
+                        <button class="popup-button">닫기</button>
+                    </div>
+                </li>
                 <li id="personality-pp3">
                     <img src="images/heart.png" alt="하트3">
                     <div id="personality-popup3">
                         <div class="popup-box">
-                            <h2>계획실천력</h2>
+                            <!-- <h2>계획실천력</h2> -->
+                            <h2>J</h2>
+                            <h3>( 계획실천력 )</h3>
                             <img src="images/imotikon-plan.png" alt="계획">
                             <p>
                                 매일 계획을 짜고 실천하는 것을 좋아함
@@ -221,7 +227,7 @@
                                 치과위생사로 일을 하면서, 스케일링 받기 힘들어하는 환자에게<br>
                                 진료 중간중간 멈추면서 환자의 컨디션에 맞춰 대응하며<br>
                                 환자 만족감과 성취감을 이끌어 내었습니다.<br>
-                                웹디자이너도 사용자 또는 거래처와 소통하며 웹사이트를 제작해야 되기 때문에<br>
+                                웹디자이너도 사용자 또는 거래처와 소통하며 웹사이트를 제작해야 되므로<br>
                                 위 경험을 바탕으로 서로 만족할 수 있는 웹디자이너가<br>
                                 될 수 있도록 노력하겠습니다.
                             </p>
@@ -238,7 +244,7 @@
             <h2 id="web-header">웹페이지 포트폴리오</h2>
             <ul>
                 <li>
-                    <a href="hm/index.html" target="_blank"><img src="images/portfolio-hm.png" alt="hm"></a>
+                    <a href="../H&M/index.html" target="_blank"><img src="images/portfolio-hm.png" alt="hm"></a>
                     <div class="text">
                         <h4>포트폴리오 H&M 사이트 브랜딩</h4>
                         <ul>
@@ -259,11 +265,26 @@
                 </li>
             </ul>
         </div>
+        <!-- 오버레이 -->
+        <div id="overlay">
+            <img src="images/museum-main.jpg" alt="main" id="m-photo">
+    
+            <button type="button" id="next"><span>Next</span></button>
+            <button type="button" id="prev"><span>Prev</span></button>
+            <button type="button" class="close"><span>Close</span></button>
+        </div> <!-- /#overlay -->
+        <div id="overlayClose">
+            <img src="images/work-banner.png" alt="Photo" id="photo">
+    
+            <button type="button" class="close"><span>Close</span></button>
+        </div> <!-- /#overlayClose -->
         <div id="work">
             <h2 id="work-header">작업</h2>
             <ul>
                 <li>
-                    <a href="#"><img src="images/museum.png" alt="수원시립박물관"></a>
+                    <a href="images/museum-main.jpg" id="museum-layer">
+                        <img src="images/work-museum.png" alt="수원시립박물관썸네일">
+                    </a>
                     <div class="text">
                         <h4>수원시립미술관 사이트 브랜딩</h4>
                         <ul>
@@ -272,7 +293,9 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#"><img src="images/banner.png" alt="배너"></a>
+                    <a href="images/banner.jpg">
+                        <img src="images/work-banner.png" alt="배너썸네일">
+                    </a>
                     <div class="text">
                         <h4>배너 작업</h4>
                         <ul>
@@ -280,6 +303,34 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <a href="images/building.jpg">
+                        <img src="images/work-building.png" alt="빌딩썸네일">
+                    </a>
+                    <div class="text">
+                        <h4>빌딩 일러스트</h4>
+                        <ul>
+                            <li>디자인 제작 기간 : 1일</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="images/blend.jpg">
+                        <img src="images/work-blend.png" alt="포스터썸네일">
+                    </a>
+                    <div class="text">
+                        <h4>블렌드 포스터</h4>
+                        <ul>
+                            <li>디자인 제작 기간 : 1일</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul id="museum">
+                <li><img src="images/museum-main.jpg" alt="page">
+                <li><img src="images/museum-content-list.jpg" alt="page">
+                <li><img src="images/museum-list.jpg" alt="page">
+                <li><img src="images/museum-content.jpg" alt="page">
             </ul>
         </div>
     </section>

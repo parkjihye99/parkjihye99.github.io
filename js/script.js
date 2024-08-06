@@ -1,30 +1,36 @@
 $(function(){ 
     // 메인페이지
-    $("#tab-menu > li").on("click", function(){ 
-        $(this).removeClass("on").addClass("on");
+    const $boxTab = $('#content1-box > #box-introduce, #box-education, #box-contact');
+
+    $('#tab-menu > li').on('click', function () { 
+        if ($(this).is('.on')) return;
+
+        $(this).addClass('on').siblings().removeClass('on');
+        $boxTab.removeClass('on');
 
         var n = $(this).index();
-        $("#content1-box > #box-introduce, #box-education, #box-contact").slideUp();
-        $("#content1-box > #box-introduce, #box-education, #box-contact").eq(n).slideDown();
-        // $("#content1-box > #box-introduce, #box-education, #box-contact").on("dblclick", function(event){ 
-        //     // event.preventDefault();
-        //     event.stopPropagation();
-        // });
-        
+        $boxTab.slideUp();
+        $boxTab.eq(n).slideDown();
+
         return false;
     });
     
 
     // 이직 페이지
-    $("#tab-menu2 > li").on("click", function(){ 
-        $(this).removeClass("on").addClass("on");
+    const $company = $('#content3-box > #turnover, #correlation');
 
-        var n = $(this).index();
-        $("#content3-box > #turnover, #correlation").slideUp();
-        $("#content3-box > #turnover, #correlation").eq(n).slideDown();
+    $("#tab-menu2 > li").on("click", function(){ 
+        if ($(this).is('.on')) return;
+
+        $(this).addClass('on').siblings().removeClass('on');
+
+        $company.removeClass('on');
+
+        var i = $(this).index();
+        $company.slideUp();
+        $company.eq(i).slideDown();
 
         return false;
-
     });
 
 
@@ -47,6 +53,7 @@ $(function(){
         $("#box-introduce").slideDown();
         return false;
     });
+
 
 
     // 이직
@@ -123,5 +130,87 @@ $(function(){
         $("#personality-pp3 > img").animate({width:100}, 400);
         return false;
     });
+
+    const $overlayClose = $('#overlayClose');
+    const $workList = $('#work > ul > li > a');
+    const $photo = $('#photo');
+    let imageIndex = 0;
+
+    // 오버레이
+    $workList.not('#museum-layer').on('click', function (event) { 
+        event.preventDefault();
+
+        imageIndex = $workList.index(this);
+
+        $photo.attr('src', this.href);
+        $overlayClose.fadeIn(function () { 
+            $photo.fadeIn();
+        });
+    });
+
+    $overlayClose.on('click', function () { 
+        $photo.fadeOut(function () { 
+            $overlayClose.fadeOut();
+        });
+    });
+
+    $photo.on('click', function (event) { 
+        event.stopPropagation();
+    });
+
+    const $overlay = $('#overlay');
+    const $museumLayer = $('#museum-layer');
+    const $museum = $('#museum > li > img');
+    const $photoM = $('#m-photo');
+    let photoIndex = 0;
+
+    // 오버레이 박물관
+    $museumLayer.on('click', function (event) { 
+        event.preventDefault();
+
+        photoIndex = $museumLayer.index(this);
+
+        $photoM.attr('src', this.src);
+        $overlay.fadeIn(function () { 
+            $photoM.fadeIn();
+        });
+    });
+
+    $('.close').on('click', function () { 
+        $photoM.fadeOut(function () { 
+            $overlay.fadeOut();
+        });
+    });
+
+    $photoM.on('click', function (event) { 
+        event.stopPropagation();
+    });
+
+    // next
+    $('#next').on('click', function (event) { 
+        event.preventDefault();
+
+        photoIndex++;
+        photoIndex %= $museum.length;
+        
+        changeImage();
+    });
+
+    // prev
+    $('#prev').on('click', function (event) { 
+        event.preventDefault();
+
+        photoIndex--;
+        if (photoIndex < 0) photoIndex = $museum.length - 1;
+
+        changeImage();
+    });
+
+    function changeImage () { 
+        $photoM.fadeOut(function () { 
+            $photoM.attr('src', $museum.eq(photoIndex).attr('src')).fadeIn();
+        });
+    };
+
 
 });
