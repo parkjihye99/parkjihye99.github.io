@@ -33,6 +33,7 @@ body { color: #333; background: #fff;}
     background: #35332b;
     text-align: center;
     color: #fff;
+    z-index: 50;
 
     position: fixed;
 }
@@ -97,7 +98,7 @@ body { color: #333; background: #fff;}
 }
 #t-prev {
     left: 25%;
-    background: url(../images/mainpage/top-right.svg) no-repeat;
+    background: url(../images/mainpage/top-left.svg) no-repeat;
     background-position: center;
     background-size: 10px 15px;
 }
@@ -149,7 +150,6 @@ body { color: #333; background: #fff;}
 
     font-family: 'GowunDodum-Regular', sans-serif;
 }
-/* #gnb-inner { display: none;} */
 #gnb-inner > li > a {
     margin-bottom: 20px;
     display: block;
@@ -202,9 +202,7 @@ body { color: #333; background: #fff;}
 /* 햄버거 메뉴 */
 .menu {
     width: 30px;
-    /* height: 25px; */
     margin: 0 auto;
-    /* background-color: lightblue; */
     cursor: pointer;
     padding: 0 10px 0 10px;
     left: 0;
@@ -249,13 +247,14 @@ body { color: #333; background: #fff;}
     margin-bottom: 30px;
 }
 #icons > li:last-child > a { margin-bottom: 0;}
+#icons > li > a > img { width: 22px;}
 
 /* 메인배경배너 */
 #mainbanner {
     height: 100vh;
 }
 #mainbanner > a {
-    background: url(../images/mainpage/mainbanner1.jpg) no-repeat center;
+    background: url(../images/mainpage/mainbanner.jpg) no-repeat center;
     background-attachment: fixed;
     display: block;
     text-indent: -9999px;
@@ -277,6 +276,7 @@ body { color: #333; background: #fff;}
 }
 .text {
     margin-left: 200px;
+    opacity: 0;
 }
 .text > h3 {
     font-size: 28px;
@@ -314,12 +314,9 @@ body { color: #333; background: #fff;}
     padding: 30px 20px 0 0;
     text-align: center;
     width: calc(100% - 600px);
-    /* width: 600px; */
     box-sizing: border-box;
 }
-/* #popup-text {
-    text-align: center;
-} */
+
 #popup-text > h3 {
     font-size: 33px;
     margin-bottom: 20px;
@@ -434,6 +431,7 @@ body { color: #333; background: #fff;}
 #footer-sns > li { margin-left: 25px;}
 #footer-sns > li:first-child { margin-left: 0;}
 #footer-sns > li > a { display: block;}
+#footer-sns > li > a > img { width: 21px;}
 
 /* footer-menu */
 #footer-menu {
@@ -451,16 +449,18 @@ body { color: #333; background: #fff;}
 .f-menu > h4 {
     font-weight: 700;
     margin-bottom: 30px;
+    font-size: 15px;
 }
 .f-menu > ul > li > a {
     display: block;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 13px;
 }
 .f-menu > ul > li:last-child > a { margin-bottom: 0;}
 #f-menu-right {
     font-weight: 700;
     text-align: right;
+    font-size: 15px;
 }
 #f-menu-right > h4 > a {
     display: block;
@@ -470,7 +470,7 @@ body { color: #333; background: #fff;}
 /* /#footer-copyright */
 #footer-copyright {
     padding-top: 25px;
-    font-size: 15px;
+    font-size: 13px;
 }
 #footer-copyright > p {
     margin-bottom: 20px;

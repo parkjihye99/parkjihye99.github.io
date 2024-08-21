@@ -44,33 +44,21 @@ $(function () {
             $('#nav').css({ background : ''});
             $('#menu-box').animate({ left : '-50%'}, 600);
             $('#nav-bg').stop().fadeOut();
-            
         }
-        count += 1;
 
+        count += 1;
     });
 
-    // nav-bg 클릭 시 메뉴 사라짐
 
-    // $('.menu').on('click', function () { 
-    //     $(this).toggleClass('on');
-    //     // $(this).find('div').removeClass('no-animation');
-    //     $('#nav-bg').stop().fadeToggle('slow');
-    //     $('.menu').toggleClass('on', 600);
-    //     $('.menu-box').addClass('on');
+    // #nav-bg 클릭 시 #nav 숨기기
+    $('#nav-bg').on('click', function () { 
+        $('#nav').css({ background : ''});
+        $('#menu-box').animate({ left : '-50%'}, 600);
+        $('#nav-bg').stop().fadeOut();
+        $('.menu').removeClass('on'); 
 
-    // });
-
-   
-    // $('#nav-bg').on('click', function() { 
-    //     $('.menu').removeClass('on');
-    //     // $('#nav-bg').css({ display : ''});
-    //     $('#nav-bg').stop().fadeOut();
-    //     $('#nav').css({ background : ''});
-    //     $('#menu-box').animate({ left : '-50%'}, 600);
-
-    // });
-
+        count = 0; 
+    });
 
 
     // 내비게이션

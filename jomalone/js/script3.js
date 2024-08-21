@@ -44,35 +44,23 @@ $(function () {
             $('#nav').css({ background : ''});
             $('#menu-box').animate({ left : '-50%'}, 600);
             $('#nav-bg').stop().fadeOut();
-            
         }
+        
         count += 1;
-
     });
 
-    // nav-bg 클릭 시 메뉴 사라짐
 
-    // $('.menu').on('click', function () { 
-    //     $(this).toggleClass('on');
-    //     // $(this).find('div').removeClass('no-animation');
-    //     $('#nav-bg').stop().fadeToggle('slow');
-    //     $('.menu').toggleClass('on', 600);
-    //     $('.menu-box').addClass('on');
+    // #nav-bg 클릭 시 #nav 숨기기
+    $('#nav-bg').on('click', function () { 
+        $('#nav').css({ background : ''});
+        $('#menu-box').animate({ left : '-50%'}, 600);
+        $('#nav-bg').stop().fadeOut();
+        $('.menu').removeClass('on'); 
 
-    // });
+        count = 0; 
+    });
 
-   
-    // $('#nav-bg').on('click', function() { 
-    //     $('.menu').removeClass('on');
-    //     // $('#nav-bg').css({ display : ''});
-    //     $('#nav-bg').stop().fadeOut();
-    //     $('#nav').css({ background : ''});
-    //     $('#menu-box').animate({ left : '-50%'}, 600);
-
-    // });
-
-
-
+    
     // 내비게이션
     // sub
     $('#gnb-inner > li').on('mouseenter', function () { 
@@ -86,5 +74,48 @@ $(function () {
 
     $('#gnb-inner > li').on('focusin', function () { 
         $(this).css({ color : '#707270'});
+    });
+
+
+    
+    // grid scroll
+    $(window).on('scroll', function () { 
+        // 현재 스크롤 위치
+        let scrollTop = $(window).scrollTop();
+        // console.log(scrollTop);
+
+        // 최대 스크롤 범위
+        let maxScroll = 900;
+
+        // 최대 margin-top 값(목표값)
+        let targetMarginTop = -480;
+
+        // 스크롤 위치가 0 ~ 600이 되도록 제한
+        let limitScrollTop = Math.min(scrollTop, maxScroll);
+
+        // 새로운 margin-top 값 계산
+        let newMarginTop = (limitScrollTop / maxScroll) * targetMarginTop;
+
+        $('#img-grid-main').css('margin-top', newMarginTop + 'px');
+    });
+
+
+    // img scroll fade-in, out
+    $(window).on('scroll', function () { 
+        let scrollTop = $(window).scrollTop();
+
+        // 불투명도 조절
+        function changeOpacity (id, scrollValue) {
+            if (scrollTop > scrollValue) {
+                $(id).addClass('fade-in').removeClass('fade-out');
+            } else {
+                $(id).addClass('fade-out').removeClass('fade-in');
+            }
+        };
+
+        changeOpacity('#scented-G', 1600);
+        changeOpacity('#scented-E', 1900);
+        changeOpacity('#scented-M', 2100);
+        changeOpacity('#scented-P', 2600);
     });
 });

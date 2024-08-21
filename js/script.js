@@ -35,108 +35,102 @@ $(function(){
 
 
     // 메인
-    $("#box-introduce").on("click", function(){ 
-        $("#tab-menu").removeClass("tab-1 tab-3").addClass("tab-2");
-        $(this).slideUp();
-        $("#box-education").slideDown();
+    function switchTab (currentTab, nextTab, tabClass) { 
+        $('#tab-menu').removeClass('tab-1 tab-2 tab-3').addClass(tabClass);
+        $(currentTab).slideUp();
+        $(nextTab).slideDown();
+    };
+
+    $('#box-introduce').on('click', function () { 
+        switchTab(this, '#box-education', 'tab-2');
         return false;
     });
-    $("#box-education").on("click", function(){ 
-        $("#tab-menu").removeClass("tab-1 tab-2").addClass("tab-3");
-        $(this).slideUp();
-        $("#box-contact").slideDown();
+    $('#box-education').on('click', function () { 
+        switchTab(this, '#box-contact', 'tab-3');
         return false;
     });
-    $("#box-contact").on("click", function(){ 
-        $("#tab-menu").removeClass("tab-2 tab-3").addClass("tab-1");
-        $(this).slideUp();
-        $("#box-introduce").slideDown();
+    $('#box-contact').on('click', function () { 
+        switchTab(this, '#box-introduce', 'tab-1');
         return false;
+    });
+
+    $('#hobby > li > img, #contact-box > li').on('click', function (event) { 
+        event.stopPropagation();
     });
 
 
 
     // 이직
-    $("#turnover").on("click", function(){ 
-        $("#tab-menu2").removeClass("tab-4").addClass("tab-5")
-        $(this).slideUp();
-        $("#correlation").slideDown();
+    function switchTab2 (currentTab, nextTab, tabClass) {
+        $('#tab-menu2').removeClass('tab-4 tab-5').addClass(tabClass);
+        $(currentTab).slideUp();
+        $(nextTab).slideDown();
+    };
+    $('#turnover').on('click', function () { 
+        switchTab2(this, '#correlation', 'tab-5');
     });
-    $("#correlation").on("click", function(){ 
-        $("#tab-menu2").removeClass("tab-5").addClass("tab-4")
-        $(this).slideUp();
-        $("#turnover").slideDown();
+    $('#correlation').on('click', function () { 
+        switchTab2(this, '#turnover', 'tab-4');
     });
-    
+
+    $('.workplace > img').on('click', function (event) { 
+        event.stopPropagation();
+    });
+
     
     // 탭 불릿 이동
     // 메인페이지
-    $("#tab-menu > li:nth-child(1)").on("click", function(){ 
-        $("#tab-menu").removeClass("tab-2 tab-3").addClass("tab-1");
-        return false;
-    });
-    $("#tab-menu > li:nth-child(2)").on("click", function(){ 
-        $("#tab-menu").removeClass("tab-1 tab-3").addClass("tab-2");
-        return false;
-    });
-    $("#tab-menu > li:nth-child(3)").on("click", function(){ 
-        $("#tab-menu").removeClass("tab-1 tab-2").addClass("tab-3");
+    $('#tab-menu > li').on('click', function () { 
+        const index = $(this).index() + 1;
+        $('#tab-menu').removeClass('tab-1 tab-2 tab-3').addClass(`tab-${index}`);
         return false;
     });
     
 
     // 이직페이지
-    $("#tab-menu2 > li:first-child").on("click", function(){ 
-        $("#tab-menu2").removeClass("tab-5").addClass("tab-4")
+    $("#tab-menu2 > li").on("click", function(){ 
+        if ($(this).is(':first-child')) {
+            $("#tab-menu2").removeClass("tab-5").addClass("tab-4");
+        } 
+        else if ($(this).is(':last-child')) {
+            $("#tab-menu2").removeClass("tab-4").addClass("tab-5");
+        }
     });
-    $("#tab-menu2 > li:last-child").on("click", function(){ 
-        $("#tab-menu2").removeClass("tab-4").addClass("tab-5")
+
+    $('#tab-menu2 > li > a').on('click', function (event) { 
+        event.preventDefault();
     });
+
 
 
     // 성격페이지
-    // 팝업1
-    $("#personality-pp1").on("click", function(){ 
-        $("#personality-pp1 > img").animate({width:0}, 400);
-        $("#personality-popup1").fadeIn(800);
-        return false;
-    });
-    $("#personality-popup1 > .popup-button").on("click", function(){ 
-        $("#personality-popup1").fadeOut(500);
-        $("#personality-pp1 > img").animate({width:100}, 400);
-        return false;
-    });
+    function popup (pp, ppPopup) {
+        $(pp).on('click', function () { 
+            $(`${pp} > img`).animate({ width : 0 }, 400);
+            $(ppPopup).fadeIn(800);
+            return false;
+        });
 
-    // 팝업2
-    $("#personality-pp2").on("click", function(){ 
-        $("#personality-pp2 > img").animate({width:0}, 400);
-        $("#personality-popup2").fadeIn(800);
-        return false;
-    });
-    $("#personality-popup2 > .popup-button").on("click", function(){ 
-        $("#personality-popup2").fadeOut(500);
-        $("#personality-pp2 > img").animate({width:100}, 400);
-        return false;
-    });
+        $(`${ppPopup} > .popup-button`).on('click', function () { 
+            $(ppPopup).fadeOut(500);
+            $(`${pp} > img`).animate({ width : 100}, 400);
+            return false;
+        });
+    }
 
-    // 팝업3
-    $("#personality-pp3").on("click", function(){ 
-        $("#personality-pp3 > img").animate({width:0}, 400);
-        $("#personality-popup3").fadeIn(800);
-        return false;
-    });
-    $("#personality-popup3 > .popup-button").on("click", function(){ 
-        $("#personality-popup3").fadeOut(500);
-        $("#personality-pp3 > img").animate({width:100}, 400);
-        return false;
-    });
+    popup('#personality-pp1', '#personality-popup1');
+    popup('#personality-pp2', '#personality-popup2');
+    popup('#personality-pp3', '#personality-popup3');
 
+
+
+    
+    // 오버레이
     const $overlayClose = $('#overlayClose');
     const $workList = $('#work > ul > li > a');
     const $photo = $('#photo');
     let imageIndex = 0;
 
-    // 오버레이
     $workList.not('#museum-layer').on('click', function (event) { 
         event.preventDefault();
 
@@ -164,7 +158,7 @@ $(function(){
     const $photoM = $('#m-photo');
     let photoIndex = 0;
 
-    // 오버레이 박물관
+    // 오버레이 - 박물관
     $museumLayer.on('click', function (event) { 
         event.preventDefault();
 
@@ -211,6 +205,26 @@ $(function(){
             $photoM.attr('src', $museum.eq(photoIndex).attr('src')).fadeIn();
         });
     };
+
+    // nav 요소 클릭
+    $('#nav > nav > ul > li > a').on('click', function (event) { 
+        event.preventDefault();
+        
+        let target = $(this.hash);
+
+        if (target.length) {
+            $('html, body').animate({ 
+                scrollTop : target.offset().top
+            }, 600);
+        }
+    });
+
+
+    // top 버튼, home 버튼
+   $('#button, #nav > nav > h1 > a').on('click', function () { 
+        $('html, body').animate({ scrollTop : 0}, 600);
+        return false;
+   });
 
 
 });

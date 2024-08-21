@@ -147,7 +147,6 @@ body { color: #333; background: #fff;}
 
     font-family: 'GowunDodum-Regular', sans-serif;
 }
-/* #gnb-inner { display: none;} */
 #gnb-inner > li > a {
     margin-bottom: 20px;
     display: block;
@@ -200,9 +199,7 @@ body { color: #333; background: #fff;}
 /* 햄버거 메뉴 */
 .menu {
     width: 30px;
-    /* height: 25px; */
     margin: 0 auto;
-    /* background-color: lightblue; */
     cursor: pointer;
     padding: 0 10px 0 10px;
     left: 0;
@@ -247,12 +244,13 @@ body { color: #333; background: #fff;}
     margin-bottom: 30px;
 }
 #icons > li:last-child > a { margin-bottom: 0;}
+#icons > li > a > img { width: 22px;}
 
 /* 스토리 */
 #story {
     width: 1200px;
     margin: 0 auto;
-    padding: 100px;
+    padding: 140px 100px 100px 100px;
     text-align: center;
 }
 #story > h2 {
@@ -266,7 +264,6 @@ body { color: #333; background: #fff;}
     padding: 90px 0 90px 0;
     justify-content: center;
     gap: 60px;
-    /* box-sizing: border-box; */
 }
 /* .list-left */
 .list-left {
@@ -394,6 +391,7 @@ body { color: #333; background: #fff;}
 #footer-sns > li { margin-left: 25px;}
 #footer-sns > li:first-child { margin-left: 0;}
 #footer-sns > li > a { display: block;}
+#footer-sns > li > a > img { width: 21px;}
 
 /* footer-menu */
 #footer-menu {
@@ -411,16 +409,18 @@ body { color: #333; background: #fff;}
 .f-menu > h4 {
     font-weight: 700;
     margin-bottom: 30px;
+    font-size: 15px;
 }
 .f-menu > ul > li > a {
     display: block;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 13px;
 }
 .f-menu > ul > li:last-child > a { margin-bottom: 0;}
 #f-menu-right {
     font-weight: 700;
     text-align: right;
+    font-size: 15px;
 }
 #f-menu-right > h4 > a {
     display: block;
@@ -430,7 +430,7 @@ body { color: #333; background: #fff;}
 /* /#footer-copyright */
 #footer-copyright {
     padding-top: 25px;
-    font-size: 15px;
+    font-size: 13px;
 }
 #footer-copyright > p {
     margin-bottom: 20px;
