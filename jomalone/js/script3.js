@@ -80,20 +80,11 @@ $(function () {
     
     // grid scroll
     $(window).on('scroll', function () { 
-        // 현재 스크롤 위치
         let scrollTop = $(window).scrollTop();
-        // console.log(scrollTop);
-
-        // 최대 스크롤 범위
         let maxScroll = 900;
-
-        // 최대 margin-top 값(목표값)
         let targetMarginTop = -480;
-
-        // 스크롤 위치가 0 ~ 600이 되도록 제한
         let limitScrollTop = Math.min(scrollTop, maxScroll);
 
-        // 새로운 margin-top 값 계산
         let newMarginTop = (limitScrollTop / maxScroll) * targetMarginTop;
 
         $('#img-grid-main').css('margin-top', newMarginTop + 'px');
@@ -104,7 +95,6 @@ $(function () {
     $(window).on('scroll', function () { 
         let scrollTop = $(window).scrollTop();
 
-        // 불투명도 조절
         function changeOpacity (id, scrollValue) {
             if (scrollTop > scrollValue) {
                 $(id).addClass('fade-in').removeClass('fade-out');

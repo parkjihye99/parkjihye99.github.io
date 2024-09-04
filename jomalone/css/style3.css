@@ -1,8 +1,7 @@
 @charset "utf-8";
 
 @font-face {
-    /* 고운돋움 */
-    font-family: 'GowunDodum-Regular'; /* sans-serif 추가 */
+    font-family: 'GowunDodum-Regular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -10,18 +9,6 @@
 
 a { text-decoration: none; color: inherit;}
 body { color: #333; background: #fff;}
-
-/* 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.noto-sans-kr-<uniquifier> {
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} 
-*/
 
 /* top-banner */
 #top-banner {
@@ -111,8 +98,6 @@ body { color: #333; background: #fff;}
     z-index: 100;
 
     position: fixed;
-    
-    /* display: none; */
 }
 #nav:hover { background: #fcf9ee;}
 #headerleft {

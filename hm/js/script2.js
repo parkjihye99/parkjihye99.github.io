@@ -10,20 +10,22 @@ $(function(){
         }
     });
 
-    // list-product
-    const $listProduct = $('#listproduct');
+    // scroll 내비게이션
+    const $navBottom = $('#nav-bottomBg');
 
-    $('#list-next').on('click', list);
-    $('#list-prev').on('click', function () { 
-        $listProduct.prepend( $listProduct.children(':last'))
-            .css('margin-left', '-230px').animate({ marginLeft: 0});
+    const navTop = $navBottom.offset().top;
+
+    $(window).on('scroll', function () { 
+        const scrollTop = $(window).scrollTop();
+
+        if (!$navBottom.is('.fixed') && scrollTop > navTop) {
+            $navBottom.addClass('fixed');
+        }
+        else if ($navBottom.is('.fixed') && scrollTop < navTop) {
+            $navBottom.removeClass('fixed');
+        }
     });
-
-    function list () { 
-        $listProduct.animate({ marginLeft: '-230px'}, function () { 
-            $listProduct.removeAttr('style').children(':first').appendTo(this);
-        });
-    };
+    
 
     // 세부 필터 적용
     $("#filter").on("click", function () { 
@@ -36,7 +38,6 @@ $(function(){
     });
 
     // 아코디언 기능
-    const $filterButton = $('#filter-type > li');
     const $filter = $('.filter-content');
 
     $filter.eq(0).addClass('on').show();

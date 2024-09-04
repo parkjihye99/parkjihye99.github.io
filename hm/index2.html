@@ -6,10 +6,11 @@
     <title>H&M list type</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../hm/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style2.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../hm/js/script2.js"></script>
+    <script src="js/script2.js"></script>
 </head>
 <body>
     <!-- 내비게이션바 -->
@@ -21,7 +22,7 @@
                     <input type="text" placeholder="제품 검색">
                 </form>
                 <header id="nav-logo">
-                    <a href="../hm/index1.html"><img src="images/mainpage/h&m-logo.png" alt="hmlogo"></a>
+                    <a href="index1.html"><img src="images/mainpage/h&m-logo.png" alt="hmlogo"></a>
                 </header>
                 <ul id="nav-menu">
                     <li><a href="#"><img src="images/mainpage/nav-mypage.png" alt="mypage"></a></li>
@@ -29,6 +30,8 @@
                     <li><a href="#"><img src="images/mainpage/nav-like.png" alt="like"></a></li>
                 </ul>
             </div>
+        </nav>
+        <div id="nav-bottomBg">
             <ul id="nav-bottom">
                 <li><a href="#">Women</a>
                     <div class="nav-slide" id="sub-1">
@@ -403,7 +406,7 @@
                             <li>
                                 <span>H&M이 하는 일</span>
                                 <ul>
-                                    <li><a href="../hm/index3.html" id="expage">Let's innovate</a></li>
+                                    <li><a href="index3.html" id="expage">Let's innovate</a></li>
                                     <li><a href="#">Let's be fair</a></li>
                                     <li><a href="#">Let's be for all</a></li>
                                     <li><a href="#">Let's be transparent</a></li>
@@ -441,50 +444,17 @@
                     </div> <!-- /.nav-slide -->
                 </li>
             </ul> <!-- /#nav-bottom -->
-        </nav>
+        </div> <!-- /#nav-bottomBg -->
     </header>
     <!-- 로컬 네비게이션 -->
     <nav>
         <ol id="lnb">
+            <li><a href="index1.html">Home</a></li>
             <li><a href="#">Women</a></li>
             <li>셔츠 & 블라우스</li>
         </ol>
     </nav>
-    <!-- 카테고리 -->
-    <section id="listproduct-box">
-        <div id="productButton">
-            <div id="productList">
-                <ul id="listproduct">
-                    <li>
-                        <a href="#"><img src="images/listpage/product-1coat.jpg" alt="코트아우터"></a>
-                        <a href="#"><span>코트/아우터</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/listpage/product-2pants.jpg" alt="바지"></a>
-                        <a href="#"><span>바지</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/listpage/product-3dress.jpg" alt="드레스"></a>
-                        <a href="#"><span>드레스</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/listpage/product-4skirt.jpg" alt="스커트"></a>
-                        <a href="#"><span>스커트</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/listpage/product-5shoes.jpg" alt="슈즈"></a>
-                        <a href="#"><span>슈즈</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/listpage/product-6bag.jpg" alt="악세서리"></a>
-                        <a href="#"><span>악세서리</span></a>
-                    </li>
-                </ul>
-            </div> <!-- /#productList -->
-            <button type="button" id="list-next"><span>왼쪽버튼</span></button>
-            <button type="button" id="list-prev"><span>오른쪽버튼</span></button>
-        </div> <!-- /#productButton -->
-    </section>
+    <!-- 코멘트 -->
     <section id="comment">
         <h2>여성 블라우스 & 셔츠</h2>
         <p>
@@ -495,6 +465,18 @@
             우아한 스타일의 아이템을 다양하게 연출해보세요. 특별한 장소에 어울리는 예쁜 브로데리 앙글레즈 소재뿐만 아니라<br> 
             면 외의 다양한 소재로 만든 사랑스러운 오프숄더 블라우스를 확인해보세요. <a href="#">퍼프 소매 탑</a>에서 다양한 아이템을 확인하세요.
         </p>
+    </section>
+    <!-- 카테고리 -->
+    <section id="category">
+        <h2>블라우스 & 셔츠</h2>
+        <ul id="category-menu">
+            <li><a href="#">전체 보기</a></li>
+            <li><a href="#">린넨 셔츠</a></li>
+            <li><a href="#">셔츠</a></li>
+            <li><a href="#">블라우스</a></li>
+            <li><a href="#">튜닉</a></li>
+            <li><a href="#">데님 셔츠</a></li>
+        </ul>
         <button type="button" id="filter">세부 필터 적용</button>
     </section>
     <div id="modal"><span>오버레이배경</span></div> <!-- /#modal -->
@@ -791,191 +773,229 @@
     </div> <!-- /#filter-popup -->
     <ul id="list-shirt">
         <li>
-            <a href="#"><img src="images/listpage/listproduct-1.png" alt="멀티스타일크링클셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-1.png" alt="패턴블라우스" class="default-img">
+                <img src="images/listpage/listproductH-1.png" alt="패턴블라우스h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>멀티 스타일 크링클 셔츠</h3></a>
-                    <h4>&#8361;39,900</h4>
-                    <h4 id="special-price">회원 특별가 &#8361;23,900</h4>
+                    <a href="#"><h3>패턴 블라우스</h3></a>
+                    <h4>&#8361;19,900</h4>
                     <div class="items-color">
                         <ul id="color-1">
-                            <li><a href="#" title="아이보리">아이보리</a></li>
-                            <li><a href="#" title="블랙">블랙</a></li>
+                            <li><a href="#" title="파우더 핑크/블랙 패턴">파우더 핑크/블랙 패턴</a></li>
+                            <li><a href="#" title="라이트 옐로/플로럴">라이트 옐로/플로럴</a></li>
+                            <li><a href="#" title="라이트 그레이/패턴">라이트 그레이/패턴</a></li>
+                            <li><a href="#" title="라이트 베이지/패턴">라이트 베이지/패턴</a></li>
                         </ul>
+                        <span class="more-swatches">+2</span>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-2.png" alt="리넨블렌드셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-2.png" alt="리브드저지티셔츠" class="default-img">
+                <img src="images/listpage/listproductH-2.png" alt="리브드저지티셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>리넨 블렌드 셔츠</h3></a>
-                    <h4>&#8361;24,900</h4>
+                    <a href="#"><h3>리브드 저지 티셔츠</h3></a>
+                    <h4>&#8361;34,900</h4>
                     <div class="items-color">
                         <ul id="color-2">
-                            <li><a href="#" title="라이트 블루">라이트 블루</a></li>
-                            <li><a href="#" title="화이트">화이트</a></li>
                             <li><a href="#" title="블랙">블랙</a></li>
-                            <li><a href="#" title="블루">블루</a></li>
+                            <li><a href="#" title="라이트 그레이">라이트 그레이</a></li>
                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-3.png" alt="리넨셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-3.png" alt="데님셔츠" class="default-img">
+                <img src="images/listpage/listproductH-3.png" alt="데님셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>리넨 셔츠</h3></a>
+                    <a href="#"><h3>데님 셔츠</h3></a>
                     <h4>&#8361;39,900</h4>
                     <div class="items-color">
                         <ul id="color-3">
-                            <li><a href="#" title="블루/스트라이프">블루/스트라이프</a></li>
-                            <li><a href="#" title="블랙">블랙</a></li>
-                            <li><a href="#" title="화이트">화이트</a></li>
-                            <li><a href="#" title="베이지/스트라이프">베이지/스트라이프</a></li>
+                            <li><a href="#" title="다크 데님 그레이">다크 데님 그레이</a></li>
+                            <li><a href="#" title="데님 블루">데님 블루</a></li>
+                            <li><a href="#" title="라이트 데님 블루">라이트 데님 블루</a></li>
+                            <li><a href="#" title="다크 데님 블루">다크 데님 블루</a></li>
                         </ul>
-                        <span class="more-swatches">+3</span>
+                        <span class="more-swatches">+1</span>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-4.png" alt="오버사이즈포플린셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-4.png" alt="오버사이즈셔츠" class="default-img">
+                <img src="images/listpage/listproductH-4.png" alt="오버사이즈셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>오버사이즈 포플린 셔츠</h3></a>
+                    <a href="#"><h3>오버사이즈 셔츠</h3></a>
                     <h4>&#8361;24,900</h4>
                     <div class="items-color">
                         <ul id="color-4">
-                            <li><a href="#" title="라이트 블루/핀스트라이프">라이트 블루/핀스트라이프</a></li>
+                            <li><a href="#" title="화이트">화이트</a></li>
+                            <li><a href="#" title="그레이/화이트 스트라이프">그레이/화이트 스트라이프</a></li>
                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-5.png" alt="브로드리앙글레즈블라우스"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-5.png" alt="텍스처셔츠" class="default-img">
+                <img src="images/listpage/listproductH-5.png" alt="텍스처셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>브로드리 잉글레즈 블라우스</h3></a>
-                    <h4>&#8361;24,900</h4>
+                    <a href="#"><h3>텍스처 셔츠</h3></a>
+                    <h4>&#8361;29,900</h4>
                     <div class="items-color">
                         <ul id="color-5">
-                            <li><a href="#" title="블루">블루</a></li>
-                            <li><a href="#" title="화이트">화이트</a></li>
                             <li><a href="#" title="블랙">블랙</a></li>
+                            <li><a href="#" title="크림색">크림색</a></li>
+                            <li><a href="#" title="도브 블루">도브 블루</a></li>
                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-6.png" alt="벌룬슬리브라미블라우스"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-6.png" alt="프릴트리밍옥스퍼드블라우스" class="default-img">
+                <img src="images/listpage/listproductH-6.png" alt="프릴트리밍옥스퍼드블라우스h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>벌룬 슬리브 라미 블라우스</h3></a>
-                    <h4>&#8361;45,900</h4>
+                    <a href="#"><h3>프릴 트리밍 옥스퍼드 블라우스</h3></a>
+                    <h4>&#8361;29,900</h4>
                     <div class="items-color">
                         <ul id="color-6">
-                            <li><a href="#" title="화이트">화이트</a></li>
+                            <li><a href="#" title="블루/스트라이프">블루/스트라이프</a></li>
                         </ul>
-                    </div>
+                    </div> 
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-7.png" alt="코튼블렌드셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-7.png" alt="플리츠프런트셔츠" class="default-img">
+                <img src="images/listpage/listproductH-7.png" alt="플리츠프런트셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>코튼 블렌드 셔츠</h3></a>
-                    <h4>&#8361;24,900</h4>
+                    <a href="#"><h3>플리츠 프런트 셔츠</h3></a>
+                    <h4>&#8361;64,900</h4>
                     <div class="items-color">
                         <ul id="color-7">
                             <li><a href="#" title="화이트">화이트</a></li>
-                            <li><a href="#" title="화이트/블루 스트라이프">화이트/블루 스트라이프</a></li>
+                            <li><a href="#" title="라이트 애프리콧">라이트 애프리콧</a></li>
                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-8.png" alt="오버사이즈리넨블렌드셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-8.png" alt="벌룬슬리브포플린블라우스" class="default-img">
+                <img src="images/listpage/listproductH-8.png" alt="벌룬슬리브포플린블라우스h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>오버사이즈 리넨 블렌드 셔츠</h3></a>
-                    <h4>&#8361;29,900</h4>
+                    <a href="#"><h3>벌룬 슬리브 포플린 블라우스</h3></a>
+                    <h4>&#8361;24,900</h4>
                     <div class="items-color">
                         <ul id="color-8">
                             <li><a href="#" title="화이트">화이트</a></li>
                             <li><a href="#" title="라이트 베이지">라이트 베이지</a></li>
-                            <li><a href="#" title="블루">블루</a></li>
-                            <li><a href="#" title="라이트 카키">라이트 카키</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="#"><img src="images/listpage/listproduct-9.png" alt="셔츠"></a>
-            <a href="#">
-                <div class="items-text">
-                    <a href="#"><h3>셔츠</h3></a>
-                    <h4>&#8361;24,900</h4>
-                    <div class="items-color">
-                        <ul id="color-9">
-                            <li><a href="#" title="크림색">크림색</a></li>
-                            <li><a href="#" title="화이트">화이트</a></li>
                             <li><a href="#" title="블랙">블랙</a></li>
-                            <li><a href="#" title="화이트/블랙 스트라이프">화이트/블랙 스트라이프</a></li>
-                        </ul>
-                        <span class="more-swatches">+3</span>
+                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-10.png" alt="옥스퍼드셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-9.png" alt="옥스퍼드셔츠" class="default-img">
+                <img src="images/listpage/listproductH-9.png" alt="옥스퍼드셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
                     <a href="#"><h3>옥스퍼드 셔츠</h3></a>
                     <h4>&#8361;24,900</h4>
                     <div class="items-color">
-                        <ul id="color-10">
-                            <li><a href="#" title="라이트 블루">라이트 블루</a></li>
-                            <li><a href="#" title="화이트">화이트</a></li>
+                        <ul id="color-9">
+                            <li><a href="#" title="크림색">크림색</a></li>
                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-11.png" alt="페더소프트데님셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-10.png" alt="리넨셔츠" class="default-img">
+                <img src="images/listpage/listproductH-10.png" alt="리넨셔츠h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>페더 소프트 셔츠</h3></a>
-                    <h4>&#8361;49,900</h4>
+                    <a href="#"><h3>리넨 셔츠</h3></a>
+                    <h4>&#8361;39,900</h4>
+                    <div class="items-color">
+                        <ul id="color-10">
+                            <li><a href="#" title="화이트/블루 스트라이프">화이트/블루 스트라이프</a></li>
+                            <li><a href="#" title="블랙">블랙</a></li>
+                            <li><a href="#" title="화이트">화이트</a></li>
+                            <li><a href="#" title="베이지/스트라이프">베이지/스트라이프</a></li>
+                        </ul>
+                        <span class="more-swatches">+1</span>
+                     </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/listpage/listproduct-11.png" alt="엠브로이더리코튼블라우스" class="default-img">
+                <img src="images/listpage/listproductH-11.png" alt="엠브로이더리코튼블라우스h" class="hover-img">
+            </a>
+            <a href="#">
+                <div class="items-text">
+                    <a href="#"><h3>엠브로이더리 코튼 블라우스</h3></a>
+                    <h4>&#8361;39,900</h4>
                     <div class="items-color">
                         <ul id="color-11">
-                            <li><a href="#" title="라이트 데님 블루">라이트 데님 블루</a></li>
-                            <li><a href="#" title="데님 그레이">데님 그레이</a></li>
-                            <li><a href="#" title="페일 데님 블루">페일 데님 블루</a></li>
+                            <li><a href="#" title="화이트">화이트</a></li>
+                            <li><a href="#" title="블랙">블랙</a></li>
                         </ul>
                     </div>
                 </div>
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/listpage/listproduct-12.png" alt="브로드리앙글레즈새틴셔츠"></a>
+            <a href="#">
+                <img src="images/listpage/listproduct-12.png" alt="V넥블라우스" class="default-img">
+                <img src="images/listpage/listproductH-12.png" alt="V넥블라우스h" class="hover-img">
+            </a>
             <a href="#">
                 <div class="items-text">
-                    <a href="#"><h3>브로드리 앙글레즈 새틴 셔츠</h3></a>
-                    <h4>&#8361;59,900</h4>
+                    <a href="#"><h3>V넥 블라우스</h3></a>
+                    <h4>&#8361;24,900</h4>
                     <div class="items-color">
                         <ul id="color-12">
-                            <li><a href="#" title="화이트">화이트</a></li>
+                            <li><a href="#" title="앤티크 로즈">앤티크 로즈</a></li>
+                            <li><a href="#" title="블랙">블랙</a></li>
+                            <li><a href="#" title="크림색">크림색</a></li>
+                            <li><a href="#" title="카키 그린">카키 그린</a></li>
                         </ul>
+                        <span class="more-swatches">+3</span>
                     </div>
                 </div>
             </a>
@@ -987,7 +1007,7 @@
         <button id="btn-more">더 보기</button>
     </section>
     <!-- footer -->
-     <footer id="footer">
+    <footer id="footer">
         <div id="footer-box">
             <div id="customer">
                 <h4>고객지원</h4>
@@ -1016,13 +1036,13 @@
             </div>
             <div id="footer-sns-copy">
                 <ul id="sns-menu">
-                    <li><a href="#"><img src="images/mainpage/footer-insta.png" alt="인스타그램"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-tiktok.png" alt="틱톡"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-youtube.png" alt="유튜브"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-pinterest.png" alt="핀터레스트"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-facebook.png" alt="페이스북"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-naver.png" alt="네이버"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-kakaotalk.png" alt="카카오톡"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-insta.png" alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-tiktok.png" alt="틱톡"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-youtube.png" alt="유튜브"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-pinterest.png" alt="핀터레스트"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-facebook.png" alt="페이스북"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-naver.png" alt="네이버"></a></li>
+                    <li><a href="#"><img src="images/listpage/sns-kakaotalk.png" alt="카카오톡"></a></li>
                 </ul>
                 <div id="copyR">
                     <span id="notice">이 사이트의 콘텐츠는 저작권 보호를 받고 있는 H&M Hennes & Mauritz AB의 자산입니다.</span>

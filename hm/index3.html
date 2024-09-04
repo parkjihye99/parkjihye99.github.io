@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../hm/css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style3.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../hm/js/script3.js"></script>
+    <script src="js/script3.js"></script>
 </head>
 <body>
     <!-- 내비게이션바 -->
@@ -22,7 +22,7 @@
                     <input type="text" placeholder="제품 검색">
                 </form>
                 <header id="nav-logo">
-                    <a href="../hm/index1.html"><img src="images/mainpage/h&m-logo.png" alt="hmlogo"></a>
+                    <a href="index1.html"><img src="images/mainpage/h&m-logo.png" alt="hmlogo"></a>
                 </header>
                 <ul id="nav-menu">
                     <li><a href="#"><img src="images/mainpage/nav-mypage.png" alt="mypage"></a></li>
@@ -30,6 +30,8 @@
                     <li><a href="#"><img src="images/mainpage/nav-like.png" alt="like"></a></li>
                 </ul>
             </div>
+        </nav>
+        <div id="nav-bottomBg">
             <ul id="nav-bottom">
                 <li><a href="#">Women</a>
                     <div class="nav-slide" id="sub-1">
@@ -62,7 +64,7 @@
                                     <li><a href="#">코트 & 재킷</a></li>
                                     <li><a href="#">블레이저 & 정장 조끼</a></li>
                                     <li><a href="#">가디건 & 스웨터</a></li>
-                                    <li><a href="../hm/index2.html" id="listpage">셔츠 & 블라우스</a></li>
+                                    <li><a href="index2.html" id="listpage">셔츠 & 블라우스</a></li>
                                     <li><a href="#">후드티 & 스웨트셔츠</a></li>
                                     <li><a href="#">탑 & 티셔츠</a></li>
                                     <li><a href="#">점프수트</a></li>
@@ -442,13 +444,13 @@
                     </div> <!-- /.nav-slide -->
                 </li>
             </ul> <!-- /#nav-bottom -->
-        </nav>
+        </div> <!-- /#nav-bottomBg -->
     </header>
     <!-- 로컬 네비게이션 -->
     <nav>
         <ol id="lnb">
+            <li><a href="index1.html">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">지속가능성</a></li>
             <li><a href="#">H&M이 하는 일</a></li>
             <li>Let's innovate</li>
         </ol>
@@ -485,7 +487,7 @@
     </section>
     <ul id="innovate-list">
         <li>
-            <a href="#"><img src="images/explanationpage/innovatelist1.png" alt="코튼에관심을가집니다"></a>
+            <a href="#"><img src="images/explanationpage/innovatelist1.png" alt="코튼에관심을가집니다" class="scale-img"></a>
             <a href="#">
                 <div class="list-text">
                     <h3>코튼에 관심을 가집니다</h3>
@@ -499,7 +501,7 @@
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/explanationpage/innovatelist2.png " alt="더욱지속가능한소재"></a>
+            <a href="#"><img src="images/explanationpage/innovatelist2.png " alt="더욱지속가능한소재" class="scale-img"></a>
             <a href="#">
                 <div class="list-text">
                     <h3>더욱 지속가능한 소재</h3>
@@ -515,7 +517,7 @@
             </a>
         </li>
         <li>
-            <a href="#"><img src="images/explanationpage/innovatelist3.png" alt="획기적인소재"></a>
+            <a href="#"><img src="images/explanationpage/innovatelist3.png" alt="획기적인소재" class="scale-img"></a>
             <a href="#">
                 <div class="list-text">
                     <h3>획기적인 소재</h3>
@@ -528,7 +530,6 @@
             </a>
         </li>
     </ul>
-    <!-- footer -->
     <footer id="footer">
         <div id="footer-box">
             <div id="customer">
@@ -558,13 +559,13 @@
             </div>
             <div id="footer-sns-copy">
                 <ul id="sns-menu">
-                    <li><a href="#"><img src="images/mainpage/footer-insta.png" alt="인스타그램"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-tiktok.png" alt="틱톡"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-youtube.png" alt="유튜브"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-pinterest.png" alt="핀터레스트"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-facebook.png" alt="페이스북"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-naver.png" alt="네이버"></a></li>
-                    <li><a href="#"><img src="images/mainpage/footer-kakaotalk.png" alt="카카오톡"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-insta.png" alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-tiktok.png" alt="틱톡"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-youtube.png" alt="유튜브"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-pinterest.png" alt="핀터레스트"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-facebook.png" alt="페이스북"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-naver.png" alt="네이버"></a></li>
+                    <li><a href="#"><img src="images/explanationpage/sns-kakaotalk.png" alt="카카오톡"></a></li>
                 </ul>
                 <div id="copyR">
                     <span id="notice">이 사이트의 콘텐츠는 저작권 보호를 받고 있는 H&M Hennes & Mauritz AB의 자산입니다.</span>
