@@ -435,10 +435,16 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     margin-bottom: 60px;
     position: relative;
 }
-#list-shirt > li > a { display: block;}
+#list-shirt > li > a { 
+    display: block;
+    border-radius: 60px;
+    overflow: hidden;
+}
 #list-shirt > li > a > img { 
     width: 350px;
+    height: 390px;
     display: block;
+    border-radius: 60px;
 }
 .hover-img {
     position: absolute;
@@ -447,8 +453,6 @@ input::placeholder { color: #cc071e; opacity: 0.5;}
     opacity: 0;
     transition: opacity 0.2s ease;
 }
-.default-img:hover { opacity: 0;}
-.hover-img:hover { opacity: 1;}
 
 /* items-text */
 .items-text { margin-top: 20px;}

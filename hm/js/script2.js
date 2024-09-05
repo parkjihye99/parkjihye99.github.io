@@ -10,6 +10,7 @@ $(function(){
         }
     });
 
+    
     // scroll 내비게이션
     const $navBottom = $('#nav-bottomBg');
 
@@ -37,6 +38,7 @@ $(function(){
         return false;
     });
 
+
     // 아코디언 기능
     const $filter = $('.filter-content');
 
@@ -60,6 +62,26 @@ $(function(){
     $('#reset').on('click', function () { 
         $('input[type="checkbox"]').add('input[type="radio"]').prop('checked', false);
         $('#recommend').prop('checked', true);
+    });
+
+
+    // list hover
+    $('#list-shirt > li > a').each(function () { 
+        const $defaultImg = $(this).find('.default-img');
+        const $hoverImg = $(this).find('.hover-img');
+
+        $(this).on('mouseenter', function () { 
+            $hoverImg.css({
+                'opacity': '1',
+                'border-radius': $defaultImg.css('border-radius')
+            });
+            $defaultImg.css('opacity', '0');
+        });
+
+        $(this).on('mouseleave', function () { 
+            $hoverImg.css('opacity', '0');
+            $defaultImg.css('opacity', '1');
+        });
     });
 
 });
